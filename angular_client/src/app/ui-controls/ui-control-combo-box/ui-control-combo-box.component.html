@@ -1,0 +1,11 @@
+<div class="ui-control">
+  <p *ngIf="label" class="ui-label">{{label?.name}}</p>
+  <div [ngClass]="disabled==false?'ui-combo-container':'ui-combo-container-disabled'" *ngIf="values.length>0">
+    <ng-container *ngFor="let item of values; index as i">
+      <div  [ngClass]="(item.active==true?'ui-combo-button-active':'ui-combo-button')+(disabled==true?' ui-no-click':'')" (click)="onClick(item.id)">
+        <p  [ngClass]="item.active==true?'ui-combo-label-active':'ui-combo-label '+((i==values.length-1||i==activeIndex-1?'':'stripe'))">{{item.name?.name}}</p>
+      </div>
+    </ng-container>
+
+  </div>
+</div>

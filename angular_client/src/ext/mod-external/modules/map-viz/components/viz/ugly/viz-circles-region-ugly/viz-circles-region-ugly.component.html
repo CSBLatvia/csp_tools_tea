@@ -1,0 +1,2 @@
+<canvas [attr.width]="wwR" [attr.height]="hhR" [ngStyle]="{'width': ww+'px','height': hh+'px'}"  class="canvasArea" #canvasRef></canvas>
+<viz-picking [mobile]="mobile" [ww]="ww" [hh]="hh" [wwR]="wwR" [hhR]="hhR" [dpi]="dpi" #vizPickingRef (onShow)="onPopShow($event)" (onHide)="onPopHide()" (onPositionUpdate)="onPopPosition($event)"></viz-picking>

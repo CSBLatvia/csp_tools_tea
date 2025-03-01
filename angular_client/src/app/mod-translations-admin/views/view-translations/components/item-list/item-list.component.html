@@ -1,0 +1,37 @@
+<div [ngClass]="index%2==0?'item':'item-2'" id="item-{{index}}">
+  <div class="clr-row clr-justify-content-between" class="title">
+    <div class="clr-col">
+      <h4 class="id-h4-dark">{{vo.id}}</h4>
+    </div>
+    <div class="clr-col">
+      <div class="checkbox-area">
+        <span class="checkbox-title">used:</span>
+        <input type="checkbox" class="checkbox-disabled" [checked]="vo.used"/>
+        <span class="checkbox-title">html:</span>
+        <input type="checkbox" class="checkbox-disabled" [checked]="vo.html"/>
+      </div>
+    </div>
+  </div>
+  <div class="clr-row">
+    <div class="clr-col">
+      <span>name_lv</span>
+    </div>
+    <div class="clr-col">
+      <span>name_en</span>
+    </div>
+  </div>
+  <div class="clr-row">
+    <div class="clr-col">
+      <span [ngClass]="vo.name_lv==''?'edit-field-empty':'edit-field'" [contentEditable]="false" spellcheck="false">{{vo.name_lv}}</span>
+    </div>
+    <div class="clr-col">
+      <span [ngClass]="vo.name_en==''?'edit-field-empty':'edit-field'" [contentEditable]="false" spellcheck="false">{{vo.name_en}}</span>
+    </div>
+  </div>
+  <div class="clr-row">
+    <div class="clr-col">
+          <button class="btn btn-primary" (click)="onModifyClick()">{{editVO?.name}}</button>
+          <button class="btn btn-primary" (click)="onDeleteClick()" *ngIf="user=='admin'">{{deleteVO?.name}}</button>
+    </div>
+  </div>
+</div>

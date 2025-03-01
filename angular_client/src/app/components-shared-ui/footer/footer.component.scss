@@ -1,0 +1,195 @@
+@import "../../../css/app-colors";
+@import "../../../css/app-main-vars";
+@import "../../../css/app-classes";
+
+.app-footer{
+  width: 100%;
+  min-height: $app-footer-height;
+  height: auto;
+  background-color: $app-col-gray-9;
+  opacity: 1;
+}
+.app-footer-tiny{
+  width: 100%;
+  min-height: $app-footer-height;
+  height: $app-footer-height;
+  background-color: $app-col-gray-9;
+  opacity: 1;
+  position: fixed;
+  bottom: 0;
+
+  //z-index: 99999999999999;
+  z-index: 22000;
+}
+
+
+.footer-container-desktop{
+  width: 100%;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+
+  padding: 0;
+  max-width: $app-max-width-top-menu-content;
+  //////////////////////////
+  min-height: $app-footer-height;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.footer-container-mobile{
+  width: 100%;
+  padding: 0;
+  margin-left: 1rem;
+  //////////////////////////
+  min-height: $app-footer-height;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.footer-item{
+  margin-bottom: 1rem;
+}
+
+.footer-container-tiny{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  min-height: $app-footer-height;
+  height: $app-footer-height;
+  //background-color: $app-col-gray-9;
+  overflow: hidden;
+}
+.footer-container-top{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  max-width: $app-max-width-top-menu-content;
+  background-color: $app-app-background;
+}
+
+.footer-block{
+  margin: 0;
+  padding: 0.25rem;
+  //overflow: hidden;
+  //background-color: fuchsia;
+  @include debugBorder();
+}
+.footer-block-tiny{
+  margin: 0;
+  padding: 0.4rem;
+  overflow: hidden;
+  text-align: center;
+}
+.footer-big-title{
+  font-weight: var(--clr-p4-font-weight);
+  font-size: var(--clr-p4-font-size);
+  margin: 0;
+  padding: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0;
+  color: #ffffff;
+}
+
+.footer-link{
+  span{
+    color: rgba(255,255,255,0.8) !important;
+    text-decoration: none !important;
+  }
+  margin: 0 !important;
+  padding:0 !important;
+  opacity: 1 !important;
+  width: max-content;
+}
+.footer-link:hover{
+  span{
+    color: rgba(255,255,255,1) !important;
+    text-decoration: underline !important;
+  }
+}
+
+.footer-link:focus:not(:focus-visible){
+  span{
+    color: rgba(255,255,255,0.8) !important;
+    text-decoration: none !important;
+  }
+  outline: none !important;
+  box-shadow: none!important;
+}
+.footer-link:focus-visible{
+  span{
+    color: rgba(255,255,255,1) !important;
+    text-decoration: underline !important;
+  }
+  outline: 2px solid $app-col-primary !important;
+}
+
+
+.footer-title{
+  font-weight: var(--clr-p5-font-weight);
+  font-size: var(--clr-p5-font-size);
+
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #ffffff !important;
+  padding-left: 0.25rem !important;
+  padding-right: 0.25rem !important;
+  opacity: 0.8 !important;
+}
+.footer-group-title{
+  font-weight: var(--clr-p5-font-weight);
+  font-size: var(--clr-p5-font-size);
+
+  margin: 0 !important;
+  color: #ffffff !important;
+  padding: 0.25rem !important;
+  opacity: 0.8 !important;
+
+  background-color: #272626;
+  border-radius: 0.25rem;
+}
+.visible{
+  opacity: 1;
+}
+.hidden{
+  opacity: 0;
+}
+//////////////////////////////////
+.footer-top{
+  @media (max-width: $app-max-width-content) {
+    display: block;
+    @include cursorTouch();
+  }
+  @media (min-width: $app-max-width-content+1) {
+    display: none;
+    @include cursorNone();
+  }
+  padding-bottom: 12px;
+  padding-left: 12px;
+  padding-top: 12px;
+}
+.footer-top-btn{
+  opacity: 1;
+  color: #ffffff;
+  background-color: $app-col-button-dark;
+  width: 48px;
+  height: 48px;
+
+  border-radius: $app-border-radius-default;
+  z-index: 1020;
+  @include defaultDropShadow();
+  transition: opacity 0.25s;
+  width: min-content;
+}
+
+.section{
+  width: fit-content !important;
+  margin-top: 0.25rem;
+  padding: 0.25rem;
+  @include debugBorder();
+
+}

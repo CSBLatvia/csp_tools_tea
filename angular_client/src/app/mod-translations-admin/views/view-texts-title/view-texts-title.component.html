@@ -1,0 +1,32 @@
+<div class="table-area">
+  <ng-container *ngFor="let item of items;index as i" >
+    <app-item-list-text-title [vo]="item" [index]="i" (onModify)="onModify($event)"></app-item-list-text-title>
+  </ng-container>
+ <app-item-modify-texts-title *ngIf="actionModify==true" [posY]="posY" [vo]="modifyVO" (onCancel)="onModifyCancel($event)" (onSubmit)="onModifySubmit($event)"></app-item-modify-texts-title>
+</div>
+<div class="pop-container">
+
+  <clr-modal [(clrModalOpen)]="modifySuccessPop" [clrModalSize]="'sm'" [clrModalStaticBackdrop]="true" [clrModalClosable]="false">
+    <p class="modal-title app-title">Success!</p>
+    <div class="modal-body">
+      <div class="csb-modal-container">
+        <p>Success - item has been modified!</p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary btn-success btn-block" (click)="closePops()">{{okVO?.name}}</button>
+    </div>
+  </clr-modal>
+  <clr-modal [(clrModalOpen)]="modifyErrorPop" [clrModalSize]="'sm'" [clrModalStaticBackdrop]="true" [clrModalClosable]="false">
+    <p class="modal-title app-title">Error!</p>
+    <div class="modal-body">
+      <div class="csb-modal-container">
+        <p>Error - item hasn't been modified!</p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary btn-warning btn-block" (click)="closePops()">{{okVO?.name}}</button>
+    </div>
+  </clr-modal>
+</div>
+

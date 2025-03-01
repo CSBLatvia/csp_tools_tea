@@ -1,0 +1,186 @@
+@import "../../../../../../css/app-main-vars";
+@import "../../../../../../css/app-colors";
+@import "../../../../../../css/app-icons";
+@import '~mapbox-gl/dist/mapbox-gl.css';
+
+.map-area{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: $app-map-light-bg;
+  @include defaultGrayBorder();
+}
+.loader{
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 6000;
+  @include cursorNone();
+}
+.loader_hidden{
+  display: none;
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 6000;
+  @include cursorNone();
+}
+.map{
+  //position:absolute;
+  width:100%;
+  height:100%;
+}
+.map-hidden{
+  position:absolute;
+  width:100%;
+  height:100%;
+  opacity: 0;
+}
+.pop-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  pointer-events: none;
+  cursor: none;
+  width: 100%;
+  height: 100%;
+}
+.pop-legend-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1100;
+  pointer-events: none;
+  cursor: none;
+  width: 100%;
+  height: 100%;
+}
+.pop-layers-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1100;
+  pointer-events: none;
+  cursor: none;
+  width: 100%;
+  height: 100%;
+}
+.debug-info{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #383838;
+  width: 140px;
+  p{
+    color: #ffffff;
+    padding: 0.125rem;
+    margin: 0;
+  }
+  display: inline-grid;
+  padding: 0.25rem;
+}
+.copyright{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: auto;
+  display: inline-grid;
+  padding: 0.25rem;
+}
+
+
+
+////////////////////////////
+.map-control-TR{
+  width: 30px;
+  height: auto;
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+  background-color: #ffffff;
+  border-radius: $app-border-radius-default;
+  @include smallDropShadow();
+}
+.map-control-BR{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: 0.25rem;
+  right: 0.25rem;
+  @include smallDropShadow();
+}
+.map-control-TL{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  border-radius: 30px;
+  @include smallDropShadow();
+}
+.map-control-BL{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: 0.25rem;
+  left: 0.25rem;
+  border-radius: 30px;
+  background-color: #ffffff;
+  @include smallDropShadow();
+}
+////////////////////////////
+.zoom-in-ico{
+  @extend .ico-zoomIN;
+  width: 30px;
+  height: 30px;
+  opacity: 1;
+}
+.zoom-out-ico{
+  @extend .ico-zoomOUT;
+  width: 30px;
+  height: 30px;
+  opacity: 1;
+}
+.legend-ico{
+  @extend .ico-legend;
+  width: 30px;
+  height: 30px;
+  opacity: 1;
+}
+.settings-blue-ico{
+  @extend .ico-settings-blue;
+  width: 30px;
+  height: 30px;
+  opacity: 1;
+}
+.settings-white-ico{
+  @extend .ico-settings-white;
+  width: 30px;
+  height: 30px;
+  opacity: 1;
+}
+.full-screen-max-ico{
+  @extend .ico-fullScreenMax;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: $app-border-radius-default;
+  @include cursorTouch();
+}
+.full-screen-min-ico{
+  @extend .ico-fullScreenMin;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: $app-border-radius-default;
+  @include cursorTouch();
+}
+

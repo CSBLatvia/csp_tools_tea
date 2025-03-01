@@ -1,0 +1,131 @@
+@import "../../../../../../css/app-main-vars";
+@import "../../../../../../css/app-modifiers";
+@import "../../../../../../css/app-colors";
+@import "../../../../../../css/app-icons";
+
+$ico-height:36px;
+$gap: $app-gap-4;
+$legendMaxWidth: 400px;
+
+
+.close-desktop{
+  @extend .ico-pop-close-desktop;
+  @include cursorTouch();
+  top: 0;
+  right: 0;
+  position: absolute;
+  opacity: 0.8;
+}
+.close-desktop:hover{
+  opacity: 1;
+}
+.close-mobile{
+  @extend .ico-pop-close-mobile;
+  @include cursorTouch();
+  top: 0;
+  right: 0;
+  position: absolute;
+  opacity: 0.6;
+}
+.close-mobile:hover{
+  opacity: 0.8;
+}
+
+.pop-legend-mobile{
+  background-color: #ffffff;
+  padding: 0;
+  margin: 0;
+
+  position: absolute;
+  z-index: 4000;
+  display: block;
+
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: auto;
+
+  span,p{
+    color: #ffffff;
+  }
+
+  @include defaultGrayBorder();
+  @include defaultDropShadow();
+}
+.pop-legend-desktop{
+  background-color: #ffffff;
+  padding: 0;
+  margin: 0;
+
+  position: absolute;
+  z-index: 4000;
+  display: block;
+
+  width: calc(100% - 2*#{$gap} );
+  bottom: $gap;
+  left: $gap;
+
+  height: auto;
+  max-width: 720px;
+  /////////////////////
+  border-radius: $app-border-radius-default;
+  @include defaultGrayBorder();
+  @include defaultDropShadow();
+  /////////////////////
+}
+.legend-container{
+  padding: $app-padding-default;
+}
+
+
+///////////////////////////////
+// containers
+//////////////////////////////
+.container-horizontal{
+  display: flex;
+  flex-direction: row;
+}
+.container-vertical{
+  display: flex;
+  flex-direction: column;
+}
+.block-horizontal{
+  padding: 0.25rem;
+  width: 100%;
+}
+.block-horizontal-left{
+  padding: 0.25rem;
+  width: 40%;
+}
+.block-horizontal-right{
+  padding: 0.25rem;
+  width: 60%;
+}
+.block-vertical{
+  padding: 0.25rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+ //@include debugBorder(#598104);
+}
+.legend-block{
+  padding: 0.25rem;
+  min-height: 115px;
+  width: 100%;
+}
+.sizes-block{
+  padding: 0.25rem;
+  width: 100%;
+  //background-color: lightgreen;
+}
+.circles-block{
+  padding: 0.25rem;
+  width: 100%;
+  //background-color: lightblue;
+}
+.list-block{
+  padding: 0.25rem;
+  width: 100%;
+
+  //background-color: lightsalmon;
+}

@@ -1,0 +1,12 @@
+<div [class]="hidden==true?'csb-options-disabled':'csb-options'" ariaEnabled [role]="'region'" [ariaLabel]="formTitle?.name">
+  <label class="csb-label" *ngIf="title!==null">{{title?.name}}</label>
+  <clr-radio-container clrInline class="noGap">
+
+    <clr-radio-wrapper *ngFor="let item of variants;let i=index;">
+      <input type="radio" clrRadio required [checked]="value==item" [value]="item" (change)="onRadioClick(item)" [(ngModel)]="value" [name]="formName"/>
+      <label>{{variantsTitles[i]?.name}}</label>
+    </clr-radio-wrapper>
+
+
+  </clr-radio-container>
+</div>

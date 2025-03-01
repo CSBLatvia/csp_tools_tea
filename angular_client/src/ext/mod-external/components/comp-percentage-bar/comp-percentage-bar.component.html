@@ -1,0 +1,18 @@
+<div class="comp" #comp>
+  <ng-container *ngIf="service.content!==null">
+
+    <div class="bar" id="bar">
+      <div class="bar-on"  [ngStyle]="{'width': service.content.values[0].value+'%'}">
+       <span class="label-on">{{service.content.values[0].value+'%'}}</span>
+      </div>
+      <div class="bar-off"  id="off-bar" [ngStyle]="{'width': service.content.values[1].value+'%'}">
+        <span class="label-off" id="off-text" [ngStyle]="{'display':sizeIsOK==true?'block':'none'}">{{service.content.values[1].value+'% '}}</span>
+      </div>
+    </div>
+
+    <span class="text" [innerHTML]="service.content.text"></span>
+  </ng-container>
+  <share-button [URL]="URL"></share-button>
+  <service-error *ngIf="service.error!==null" [data]="service.error"></service-error>
+  <service-empty *ngIf="service.empty!==null" [data]="service.empty"></service-empty>
+</div>

@@ -1,0 +1,7 @@
+<div class="filter-area">
+    <button class="btn btn-filter" [ngClass]="filter==1?'btn-primary':'btn-outline'" (click)="onFilterChangeUsed(1)">used</button>
+    <button class="btn btn-filter" [ngClass]="filter==0?'btn-primary':'btn-outline'" (click)="onFilterChangeUsed(0)">unused</button>
+    <button class="btn btn-filter" [ngClass]="filter==-1?'btn-primary':'btn-outline'" (click)="onFilterChangeUsed(-1)">all</button>
+</div>
+
+

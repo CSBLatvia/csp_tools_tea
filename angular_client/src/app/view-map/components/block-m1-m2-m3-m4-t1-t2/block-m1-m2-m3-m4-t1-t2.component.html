@@ -1,0 +1,34 @@
+<ng-container #view>
+  <div *ngIf="mobile==true" [ngClass]="open==true?'expandable-block-open':'expandable-block-close'">
+    <div class="expandable-block-title-mob" (click)="onOpenClose()">
+      <h3 class="h3-title">{{titleVO?.name}}</h3>
+      <clr-icon shape="angle" [dir]="open==true?'up':'down'" size="24" class="is-white ico-expandable"></clr-icon>
+    </div>
+    <div [ngClass]="open==true?'expandable-block-content-mob':'expandable-block-content-mob-hidden'">
+      <app-choose-m1-fat></app-choose-m1-fat>
+      <app-choose-m2></app-choose-m2>
+      <app-choose-m3></app-choose-m3>
+      <app-choose-m4></app-choose-m4>
+      <app-choose-t1></app-choose-t1>
+      <app-choose-t2></app-choose-t2>
+      <app-choose-year></app-choose-year>
+    </div>
+  </div>
+  <div class="expandable-block-desktop" *ngIf="mobile==false">
+    <div class="expandable-block-title">
+      <h3 class="h3-title">{{titleVO?.name}}</h3>
+      <br>
+      <h6 class="h6-title">{{descriptionVO?.name}}</h6>
+    </div>
+
+    <div class="expandable-block-content-desktop">
+      <app-choose-m1-fat></app-choose-m1-fat>
+      <app-choose-m2></app-choose-m2>
+      <app-choose-m3></app-choose-m3>
+      <app-choose-m4></app-choose-m4>
+      <app-choose-t1></app-choose-t1>
+      <app-choose-t2></app-choose-t2>
+      <app-choose-year></app-choose-year>
+    </div>
+  </div>
+</ng-container>

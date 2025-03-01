@@ -1,0 +1,178 @@
+@import "../assets/svg/icons.scss";
+@import "app-colors";
+
+
+.icon{
+  padding:0;
+  margin: 0;
+}
+.ico-buttonHamburger{
+  @extend .icon;
+  @extend .svg-buttonhamburger;
+  cursor: pointer;
+}
+.ico-buttonHamburger-close{
+  @extend .icon;
+  @extend .svg-buttonhamburgerclose;
+  cursor: pointer;
+}
+.ico-buttonAbout{
+  @extend .icon;
+  @extend .svg-buttonabout;
+  cursor: pointer;
+}
+.ico-buttonDown{
+  @extend .icon;
+  @extend .svg-buttondown;
+  cursor: pointer;
+}
+.ico-buttonUP{
+  @extend .icon;
+  @extend .svg-buttonup;
+  cursor: pointer;
+}
+.ico-closeDefault{
+  @extend .icon;
+  @extend .svg-closedefault;
+  cursor: pointer;
+}
+.ico-closeDefaultPrimary{
+  @extend .icon;
+  @extend .svg-closedefaultprimary;
+  cursor: pointer;
+}
+.ico-closeDefaultPrimaryAlert{
+  @extend .icon;
+  @extend .svg-closedefaultprimaryalert;
+  cursor: pointer;
+}
+.ico-closeDefaultWhite{
+  @extend .icon;
+  @extend .svg-closedefaultwhite;
+  cursor: pointer;
+}
+.ico-downloadIcoBig{
+  @extend .icon;
+  @extend .svg-downloadicobig;
+  cursor: pointer;
+}
+.ico-legendClose{
+  @extend .icon;
+  @extend .svg-legend-close;
+  cursor: pointer;
+}
+.ico-legend{
+  @extend .icon;
+  @extend .svg-legend;
+  cursor: pointer;
+}
+.ico-settings-white{
+  @extend .icon;
+  @extend .svg-settings-white;
+  cursor: pointer;
+}
+.ico-settings-blue{
+  @extend .icon;
+  @extend .svg-settings-blue;
+  cursor: pointer;
+}
+.ico-screenMax{
+  @extend .icon;
+  @extend .svg-screen-max;
+  cursor: pointer;
+}
+.ico-screenMin{
+  @extend .icon;
+  @extend .svg-screen-min;
+  cursor: pointer;
+}
+.ico-zoomIN{
+  @extend .icon;
+  @extend .svg-zoom-in;
+}
+.ico-zoomOUT{
+  @extend .icon;
+  @extend .svg-zoom-out;
+}
+.ico-fullScreenMin{
+  @extend .icon;
+  @extend .svg-fullscreenmin;
+}
+.ico-fullScreenMax{
+  @extend .icon;
+  @extend .svg-fullscreenmax;
+}
+.ico-layers{
+  @extend .icon;
+  @extend .svg-layers;
+}
+
+.ico-sliders{
+  @extend .icon;
+  @extend .svg-sliders;
+}
+
+
+//////////////////
+// UI-ICONS
+/////////////////
+.ico-radio-off{
+  @extend .icon;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow:  inset 0px 0px 0px 2px $app-col-primary;
+}
+.ico-radio-over{
+  @extend .icon;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: inset 0px 0px 0px 2px $app-col-primary;
+}
+.ico-radio-on{
+  @extend .icon;
+  box-sizing: border-box;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: inset 0px 0px 0px 7.5px $app-col-primary;
+}
+.ico-dropdown-arrow-open{
+  @extend .icon;
+  @extend .svg-ico-dropdown-arrow-open;
+  width: 45px;
+  height: 40px;
+}
+.ico-dropdown-arrow-close{
+  @extend .icon;
+  @extend .svg-ico-dropdown-arrow-close;
+  width: 45px;
+  height: 40px;
+}
+.ico-dropdown-clear{
+  @extend .icon;
+  @extend .svg-ico-dropdown-clear;
+  width: 40px;
+  height: 40px;
+}
+
+
+
+.ico-pop-close-desktop{
+  @extend .icon;
+  @extend .svg-ico-pop-close-desktop;
+  width: 27px;
+  height: 27px;
+}
+.ico-pop-close-mobile{
+  @extend .icon;
+  @extend .svg-ico-pop-close-mobile;
+  width: 36px;
+  height: 36px;
+}
+
+

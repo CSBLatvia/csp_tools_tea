@@ -1,0 +1,12 @@
+
+<ng-container *ngIf="mobile==false">
+  <div class="map-title-desktop">
+    <h4 class="txt-desktop">{{vo?.name}}</h4>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="mobile==true">
+  <div class="map-title-mobile">
+    <h6 class="txt-mobile">{{vo?.name}}</h6>
+  </div>
+</ng-container>

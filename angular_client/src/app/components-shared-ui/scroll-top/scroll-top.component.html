@@ -1,0 +1,9 @@
+<ng-container *ngIf="hasFooter==false">
+  <div class="scroll-top">
+    <div class="scroll-top-btn" (click)="onTopClick()" [ngClass]="scroll>100?'show':'hide'" ariaEnabled>
+      <clr-icon shape="angle" size="48" title="up-icon"></clr-icon>
+    </div>
+  </div>
+</ng-container>
+
+

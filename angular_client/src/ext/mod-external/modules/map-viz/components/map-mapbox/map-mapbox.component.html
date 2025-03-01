@@ -1,0 +1,66 @@
+<div  id="map-area" class="map-area" [ngClass]="mapLayerStyleID">
+
+      <div class="map" id="map" #mapRef></div>
+      <div class="viz-container">
+
+       <app-viz-map
+         [model]="model"
+         [route]="route"
+         [ww]="ww"
+         [hh]="hh"
+         [visible]="visible"
+       ></app-viz-map>
+
+      </div>
+      <div class="pop-legend-container" #legendContainer id="legendContainer"></div>
+      <div class="pop-layers-container" #layersContainer id="layersContainer"></div>
+      <div class="controls-container" #controlsContainer></div>
+      <map-title [mobile]="mobile" [vo]="titleVO"></map-title>
+      <div class="loader" #loaderContainer>
+        <span class="spinner spinner-inverse spinner-md"></span>
+      </div>
+
+      <map-no-data-info *ngIf="service.dataIsNotComplete==true"></map-no-data-info>
+
+      <ng-container>
+        <div class="map-control-TR">
+          <div (click)="onFullscreenClick()" *ngIf="fullscreen==false" id="fullscreen-max">
+            <div class="full-screen-max-ico" aria-disabled="true"></div>
+          </div>
+          <div (click)="onFullscreenClick()" *ngIf="fullscreen==true" id="fullscreen-min">
+            <div class="full-screen-min-ico" aria-disabled="true"></div>
+          </div>
+          <div (click)="onZoomClick(1)" [ngClass]="ZOOM_IN_ENABLED==true?'enabled':'disabled'" id="zoom-in">
+            <div class="zoom-in-ico zoom-ico" aria-disabled="true"></div>
+          </div>
+          <div (click)="onZoomClick(-1)" [ngClass]="ZOOM_OUT_ENABLED==true?'enabled':'disabled'" id="zoom-out">
+            <div class="zoom-out-ico zoom-ico" aria-disabled="true"></div>
+          </div>
+          <!-- onControlsLayers -->
+          <div (click)="onControlsLayers()" [ngClass]="layersOpen==false?'enabled':'disabled'" id="layers" *ngIf="layersOpen==false">
+            <div aria-disabled="true">
+              <div class="layers-ico" aria-disabled="true"></div>
+            </div>
+          </div>
+        </div>
+        <div class="map-control-BL" *ngIf="legendIsVisible==false">
+          <div (click)="onLegendClick(true)" id="legend">
+            <div class="legend-ico" aria-disabled="true"></div>
+          </div>
+        </div>
+        <!--
+        <div class="map-control-BR">
+        </div>
+        -->
+      </ng-container>
+      <div class="controls-top">
+
+      </div>
+      <div class="controls-bottom">
+
+      </div>
+
+      <div class="copyright"  [innerHTML]="mapCopyRightsVO?.name"></div>
+      <all-pops [showLocalizations]="true"></all-pops>
+
+</div>

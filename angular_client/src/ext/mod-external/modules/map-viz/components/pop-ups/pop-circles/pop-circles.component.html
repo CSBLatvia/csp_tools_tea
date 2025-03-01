@@ -1,0 +1,11 @@
+<div class="pop-container" [ngClass]="visible==true?'visible':'hidden'"  [style.top.px]="y+gapY" [style.left.px]="x+gapX" >
+    <div class="pop" *ngIf="vo">
+      <p class="p5 pop-title">{{vo.title?.name}}</p>
+      <div class="pop-spinner last" *ngIf="vo.textHTMLValue==''">
+        <span class="spinner spinner-sm spinner-inverse"></span>
+      </div>
+      <ng-container *ngIf="vo.textHTMLValue!==''">
+        <p class="p5 pop-txt last" [innerHTML]="vo.textHTMLValue"></p>
+      </ng-container>
+    </div>
+</div>

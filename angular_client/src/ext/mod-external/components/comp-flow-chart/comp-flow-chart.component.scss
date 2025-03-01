@@ -1,0 +1,129 @@
+@import "../../../../css/ext-components";
+@import "../../../../css/app-colors";
+
+.comp{
+  width: 100%;
+  height: auto;
+  background-color: #ffffff !important;
+  background-image: none !important;
+  min-height: 40px;
+}
+.chart{
+  width: 100%;
+  height: auto;
+}
+.title{
+  padding: 0.25rem !important;
+  margin: 0 !important;
+}
+.title-left{
+  display: inline-block;
+  padding: 0.25rem !important;
+  margin: 0.25rem !important;
+  text-align: left !important;
+
+  margin-bottom: 0 !important;
+  margin-left: 1rem !important;
+
+  border-radius: 3px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+  line-height: var(--clr-p7-font-size) !important;
+
+}
+.title-right{
+  display: inline-block; float: right;
+  padding: 0.25rem !important;
+  margin: 0.25rem !important;
+  text-align: right !important;
+
+  margin-bottom: 0 !important;
+  margin-right: 1rem !important;
+
+  border-radius: 3px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+  line-height: var(--clr-p7-font-size) !important;
+}
+
+.txt-on{
+  color: #ffffff;
+  background-color: $app-col-primary;
+}
+.txt-off{
+  color: #000000;
+  background-color: $app-col-gray-2;
+}
+
+
+$txt-color: #000000;
+$txt-bg-color: #ffffff;
+
+
+
+
+.highcharts-root text {
+  font-family: 'Roboto Condensed', Arial, Helvetica;
+  stroke-width: 0;
+  //////////////////////////////
+  fill: $txt-color;
+  background-color: $txt-bg-color;
+  //////////////////////////////
+}
+.highcharts-root  * {
+  font-family: 'Roboto Condensed', Arial, Helvetica;
+}
+
+.highcharts-strong {
+  font-weight: bold;
+}
+.highcharts-emphasized {
+  font-style: italic;
+}
+
+.highcharts-point{
+  stroke: none;
+}
+.highcharts-node{
+  stroke: none;
+}
+
+/*!* Titles *!*/
+.highcharts-title {
+  fill: #333333;
+  //font-size: 1.5em;
+  font-weight: 400 !important;
+}
+.highcharts-subtitle {
+  fill: #666666;
+}
+
+/*!* Tooltip *!*/
+.highcharts-tooltip {
+  cursor: default;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: stroke 50ms;
+}
+
+.highcharts-tooltip text {
+  fill: #333333;
+}
+
+.highcharts-tooltip .highcharts-header {
+  font-size: 0.85em;
+}
+
+.highcharts-tooltip-box {
+  stroke-width: 1px;
+  //fill: #f7f7f7;
+  //fill-opacity: 0.85;
+  stroke: $app-col-primary-dark-4;
+}
+

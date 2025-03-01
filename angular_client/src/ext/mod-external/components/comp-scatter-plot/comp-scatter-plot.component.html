@@ -1,0 +1,9 @@
+<div class="comp" #comp>
+  <div class="chart" id="{{chart_id}}"></div>
+  <share-button  [URL]="URL"></share-button>
+  <service-error *ngIf="error!==null" [data]="error"></service-error>
+  <service-empty *ngIf="empty!==null" [data]="empty"></service-empty>
+</div>
+
+
+

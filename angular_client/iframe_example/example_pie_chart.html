@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>example_pie_chart</title>
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" charset="utf-8">
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    window.addEventListener("message", (event) => {
+
+      const func = event.data.func;
+      const id = event.data.id;
+      const fullscreen = event.data.fullscreen;
+      let ww = -1;
+      let hh = -1;
+
+      console.log('***************');
+      console.log('PARENT-WIN - MESSAGE');
+      console.log('***************');
+      console.log('func: '+func);
+      console.log('id: '+id);
+      console.log('***************');
+
+      let elem = document.getElementById(id);
+      console.dir(elem);
+      console.log('***************');
+
+
+      switch (func){
+        case 'iframe-fullscreen':
+
+          if(fullscreen==true){
+            elem.classList.add('iframe-full');
+          }else{
+            elem.classList.remove('iframe-full');
+          }
+          break;
+
+        case 'resize':
+          ww = event.data.width;
+          hh = event.data.height;
+          break;
+      }
+
+
+
+    }  );
+  </script>
+</head>
+<body>
+
+<iframe
+  class="iframe"
+  id="b5611e9f-b711-4865-b6e5-87e4f0d42a7c"
+  src="https://tools.csb.gov.lv/tea_3/external/lv/ext-pie-chart/2022/workplace/number-of-workplaces/territories-3/LV0049000/none/none/out?dom=b5611e9f-b711-4865-b6e5-87e4f0d42a7c"
+></iframe>
+</body>
+</html>

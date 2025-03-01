@@ -1,0 +1,15 @@
+<div class="list-area">
+  <div class="list-title" (click)="onMenuClick()">
+    <h1 class="list-item">{{value}}</h1>
+    <div class="list-ico">
+      <clr-icon shape="caret" dir="up"  size="30" class="is-solid ico" *ngIf="menuOpen==true"></clr-icon>
+      <clr-icon shape="caret" dir="down"  size="30" class="is-solid ico" *ngIf="menuOpen==false"></clr-icon>
+    </div>
+  </div>
+  <div class="list-menu" *ngIf="menuOpen==true">
+    <ng-container *ngFor="let item of tables;index as i">
+      <h1 [ngClass]="id==i?'list-item-active':'list-item'" (click)="onItemClick(i)" [id]="i">{{item}}</h1>
+    </ng-container>
+  </div>
+
+</div>

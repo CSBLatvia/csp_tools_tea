@@ -1,0 +1,42 @@
+<div  id="map-area" class="map-area">
+
+     <map-title [mobile]="mobile" [vo]="titleVO"></map-title>
+
+      <div class="map" id="map" #mapRef></div>
+      <div class="loader" #loaderContainer>
+        <span class="spinner spinner-inverse spinner-md"></span>
+      </div>
+
+
+      <ng-container>
+        <div class="map-control-TR">
+          <div (click)="onFullscreenClick()" *ngIf="fullscreen==false" id="fullscreen-max">
+            <div class="full-screen-max-ico" aria-disabled="true"></div>
+          </div>
+          <div (click)="onFullscreenClick()" *ngIf="fullscreen==true" id="fullscreen-min">
+            <div class="full-screen-min-ico" aria-disabled="true"></div>
+          </div>
+          <div (click)="onZoomClick(1)" [ngClass]="ZOOM_IN_ENABLED==true?'enabled':'disabled'" id="zoom-in">
+            <div class="zoom-in-ico zoom-ico" aria-disabled="true"></div>
+          </div>
+          <div (click)="onZoomClick(-1)" [ngClass]="ZOOM_OUT_ENABLED==true?'enabled':'disabled'" id="zoom-out">
+            <div class="zoom-out-ico zoom-ico" aria-disabled="true"></div>
+          </div>
+        </div>
+        <!--
+        <div class="map-control-BR">
+        </div>
+        -->
+      </ng-container>
+      <div class="controls-top">
+
+      </div>
+      <div class="controls-bottom">
+
+      </div>
+
+      <div class="copyright" [innerHTML]="mapCopyRightsVO?.name"></div>
+      <all-pops [showLocalizations]="true"></all-pops>
+
+
+</div>

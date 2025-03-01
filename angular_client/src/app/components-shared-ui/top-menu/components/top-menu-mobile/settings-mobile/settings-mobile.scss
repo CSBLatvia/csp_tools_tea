@@ -1,0 +1,158 @@
+@import "../../../../../../css/app-main-vars";
+@import "../../../../../../css/app-classes";
+@import "../../../../../../css/app-icons";
+
+///////////////////////////////
+.settings-view{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 9999999999;
+  background-color: rgba(0,0,0,0.4);
+  @include defaultDropShadow();
+}
+.settings-area{
+  position: fixed;
+  width: 320px;
+}
+
+.top-menu{
+  width: 100%;
+  height: $app-top-menu-height;
+  top: 0;
+  left: 0;
+  background-color: $app-col-top-menu;
+  position: relative;
+  .close{
+    .bg{
+      background-color: rgba(0,0,0,0.3);
+      width: $app-top-menu-height;
+      height: $app-top-menu-height;
+      right: 0;
+      top:0;
+      position: absolute;
+    }
+    .ico{
+      @extend .ico-buttonHamburger-close;
+      width: $app-top-menu-height;
+      height: $app-top-menu-height;
+      right: 0;
+      top:0;
+      position: absolute;
+    }
+  }
+}
+
+.settings-area-hidden{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  touch-action: auto;
+  pointer-events: auto;
+  cursor: pointer;
+}
+.menu-ico-button{
+  @include cursorTouch();
+  width: $app-top-menu-height;
+  height: $app-top-menu-height;
+  background-color: rgba(255, 255, 255, 0);
+  left: 0;
+  top: 0;
+  .ico{
+    fill: #ffffff;
+    width: 20px;
+    height: 20px;
+    margin: calc((#{$app-top-menu-height} - 20px)/2);
+    opacity: 100%;
+  }
+}
+.menu-ico-button:hover{
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.settings-close-button{
+  @include cursorTouch();
+  width: $app-top-menu-height;
+  height: $app-top-menu-height;
+  background-color: rgba(0, 0, 0, 0.15);
+  right: 0;
+  top: 0;
+  .ico{
+    fill: #ffffff;
+    width: 36px;
+    height: 36px;
+    margin: calc((#{$app-top-menu-height} - 36px)/2);
+    opacity: 100%;
+  }
+  position: absolute;
+}
+.settings-close-button:hover{
+  background-color: rgba(0, 0, 0, 0.30);
+}
+
+
+.csb--sidenav{
+  max-width: 100%;
+  min-width: 100%;
+  width: 100%;
+  height: calc(100vh - #{$app-top-menu-height});
+  background-color: #ffffff;
+  padding: 0.5rem;
+}
+.settings-title{
+
+  @include cursorNone();
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  text-align: left;
+  padding-left: calc(#{$app-top-menu-height} + 12px) !important;
+  color: #ffffff;
+  line-height: $app-top-menu-height;
+
+}
+
+.csb-btn{
+  display: inline-block;
+  padding: 0.2rem;
+  background-color: $app-col-gray;
+  margin: 0.25rem;
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: $app-border-radius-default;
+  width: 100%;
+
+  h6{
+    @include noGap();
+    padding: 0.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    @include cursorTouch();
+  }
+}
+.csb-btn:hover{
+  background-color: $app-col-primary-light-4;
+  h6{
+    color: #ffffff;
+    text-decoration: underline;
+  }
+}
+.csb-btn-active{
+  pointer-events: none !important;
+  touch-action: none !important;
+  @include cursorNone();
+  width: 100%;
+  background-color: $app-col-primary-light-4;
+  h6{
+    @include noGap();
+    padding: 0.5rem;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #ffffff;
+    text-decoration: underline;
+  }
+}

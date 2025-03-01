@@ -1,0 +1,24 @@
+
+<div class="share-button-container" tabindex="-1" [ngClass]="open==true?'pointerEventsEnabled':'pointerEventsDisabled'">
+      <div class="share-button">
+        <div class="share-icon"  #share>
+          <clr-icon shape="code" aria-hidden="true" size="24"
+             class="ico"
+             color="#0072a3"
+             (click)="onShareClick()"
+          ></clr-icon>
+        </div>
+        <span class="share-info" #info style="display: none">{{ infoSuccess.name }}</span>
+      </div>
+      <clr-modal [(clrModalOpen)]="open" [clrModalSize]="'sm'">
+          <h4 class="modal-title" tabindex="-1">{{ popTitle.name }}</h4>
+          <div class="modal-body">
+            <span class="label-p5">{{ URL }}</span>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-block btn-primary" (click)="onPopCopy()">{{popCopy.name}}</button>
+            <button type="button" class="btn btn-block btn-outline" (click)="onPopCancel()">{{ popClose.name }}</button>
+          </div>
+        </clr-modal>
+</div>
+

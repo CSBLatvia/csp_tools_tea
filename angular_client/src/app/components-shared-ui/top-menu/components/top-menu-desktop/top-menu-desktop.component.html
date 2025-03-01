@@ -1,0 +1,13 @@
+<div #settingsContainer></div>
+<nav class="menu-container" [title]="title?.name">
+  <div class="group-left">
+    <div (click)="changeViewClick('landing')"    class="label-h5"  [ngClass]="route.view=='landing'?'btn-menu-active':'btn-menu'"   ariaEnabled [role]="'button'" [ariaLabelID]="'aria-btn-home'">{{title?.name}}</div>
+    <div (click)="changeViewClick('about')" [ngClass]="route.view=='about'?'btn-menu-active':'btn-menu'" ariaEnabled [role]="'button'" [ariaLabelID]="'aria-btn-about'">
+      <clr-icon shape="info-circle" size="24"> </clr-icon>
+    </div>
+  </div>
+  <div class="group-right">
+    <div (click)="changeLanguageClick('lv')"     class="label-h5"  [ngClass]="route.lang=='lv'?'btn-menu-active':'btn-menu'" ariaEnabled [role]="'button'" [ariaLabelID]="'aria-btn-lang-lv'">{{buttonLV?.name}}</div>
+    <div (click)="changeLanguageClick('en')"     class="label-h5"  [ngClass]="route.lang=='en'?'btn-menu-active':'btn-menu'" ariaEnabled [role]="'button'" [ariaLabelID]="'aria-btn-lang-en'">{{buttonEN?.name}}</div>
+  </div>
+</nav>

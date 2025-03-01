@@ -1,0 +1,7 @@
+<div class="pop-container-map" [ngClass]="visible==true?'visible':'hidden'"  [style.top.px]="y+gapY" [style.left.px]="x+gapX" >
+  <ng-container *ngIf="vo">
+    <div class="pop">
+      <p class="p5 pop-title">{{vo.title?.name}}</p>
+    </div>
+  </ng-container>
+</div>

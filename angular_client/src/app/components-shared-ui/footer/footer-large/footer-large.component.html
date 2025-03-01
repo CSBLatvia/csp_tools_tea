@@ -1,0 +1,183 @@
+<footer class="app-footer" role="contentinfo">
+  <div class="footer-container-desktop" *ngIf="mobile==false" #footer>
+      <div class="footer-item">
+        <div class="section" ariaEnabled [role]="'region'" [ariaLabelID]="'aria-contacts-block'">
+          <div class="clr-row">
+            <div class="clr-col">
+              <div class="footer-block">
+                  <span class="footer-group-title">{{groupContactsTitle?.name}}</span>
+              </div>
+            </div>
+          </div>
+          <div class="clr-row">
+            <div class="clr-col">
+              <div class="footer-block">
+                  <a [href]="ownerValue?.name" class="footer-link" ariaEnabled [ariaLabelID]="'aria-org-link'">
+                      <span class="footer-title">{{ownerTitle?.name}}:</span>
+                  </a>
+              </div>
+            </div>
+          </div>
+          <div class="clr-row">
+            <div class="clr-col">
+              <div class="footer-block">
+                  <a [href]="'mailto:'+mailValue?.name" class="footer-link" ariaEnabled [ariaLabelID]="'aria-mail-link'">
+                    <span class="footer-title">{{mailValue?.name}}:</span>
+                  </a>
+              </div>
+            </div>
+          </div>
+          <div class="clr-row">
+            <div class="clr-col">
+              <div class="footer-block">
+                  <a [href]="'tel:'+phoneValue?.name" class="footer-link" ariaEnabled [ariaLabelID]="'aria-phone-link'">
+                    <span class="footer-title">{{phoneValue?.name}}:</span>
+                  </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-item">
+        <div class="section" ariaEnabled [role]="'region'" [ariaLabelID]="'aria-other-block'">
+          <div class="clr-row">
+            <div class="clr-col">
+              <div class="footer-block">
+                  <span class="footer-group-title">{{groupOtherTitle?.name}}</span>
+              </div>
+            </div>
+          </div>
+          <div class="clr-row">
+            <div class="clr-col">
+              <div class="footer-block">
+                  <a routerLink="/{{route?.lang}}/about" class="footer-link" ariaEnabled [ariaLabelID]="'aria-about-link'">
+                    <span class="footer-title">{{aboutTitle?.name}}</span>
+                  </a>
+              </div>
+            </div>
+          </div>
+          <div class="clr-row">
+            <div class="clr-col">
+              <div class="footer-block">
+                  <a routerLink="/{{route?.lang}}/iframe" class="footer-link" ariaEnabled [ariaLabelID]="'aria-iframe-link'">
+                    <span class="footer-title">{{iframeTitle?.name}}</span>
+                  </a>
+              </div>
+            </div>
+          </div>
+          <div class="clr-row">
+            <div class="clr-col">
+              <div class="footer-block">
+                  <a [href]="toolsValue?.name" class="footer-link" ariaEnabled [ariaLabelID]="'aria-tools-link'">
+                    <span class="footer-title">{{toolsTitle?.name}}</span>
+                  </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-item">
+        <div class="section" ariaEnabled [role]="'region'" [ariaLabelID]="'aria-other-block'">
+          <div class="clr-row">
+            <div class="clr-col">
+              <div class="footer-block">
+                  <img src="assets/img/eu_white_200x45_en.png" *ngIf="route?.lang=='en'"/>
+                  <img src="assets/img/eu_white_200x45_lv.png" *ngIf="route?.lang=='lv'"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="footer-container-mobile" *ngIf="mobile==true" #footer>
+    <div class="footer-item">
+      <div class="section" ariaEnabled [role]="'region'" [ariaLabelID]="'aria-contacts-block'">
+        <div class="clr-row">
+          <div class="clr-col">
+            <div class="footer-block">
+              <span class="footer-group-title">{{groupContactsTitle?.name}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="clr-row">
+          <div class="clr-col">
+            <div class="footer-block">
+              <a [href]="ownerValue?.name" class="footer-link" ariaEnabled [ariaLabelID]="'aria-org-link'">
+                <span class="footer-title">{{ownerTitle?.name}}:</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="clr-row">
+          <div class="clr-col">
+            <div class="footer-block">
+              <a [href]="'mailto:'+mailValue?.name" class="footer-link" ariaEnabled [ariaLabelID]="'aria-mail-link'">
+                <span class="footer-title">{{mailValue?.name}}:</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="clr-row">
+          <div class="clr-col">
+            <div class="footer-block">
+              <a [href]="'tel:'+phoneValue?.name" class="footer-link" ariaEnabled [ariaLabelID]="'aria-phone-link'">
+                <span class="footer-title">{{phoneValue?.name}}:</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-item">
+      <div class="section" ariaEnabled [role]="'region'" [ariaLabelID]="'aria-other-block'">
+        <div class="clr-row">
+          <div class="clr-col">
+            <div class="footer-block">
+              <span class="footer-group-title">{{groupOtherTitle?.name}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="clr-row">
+          <div class="clr-col">
+            <div class="footer-block">
+              <a routerLink="/{{route?.lang}}/about" class="footer-link" ariaEnabled [ariaLabelID]="'aria-about-link'">
+                <span class="footer-title">{{aboutTitle?.name}}</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="clr-row">
+          <div class="clr-col">
+            <div class="footer-block">
+              <a routerLink="/{{route?.lang}}/iframe" class="footer-link" ariaEnabled [ariaLabelID]="'aria-iframe-link'">
+                <span class="footer-title">{{iframeTitle?.name}}</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="clr-row">
+          <div class="clr-col">
+            <div class="footer-block">
+              <a [href]="toolsValue?.name" class="footer-link" ariaEnabled [ariaLabelID]="'aria-tools-link'">
+                <span class="footer-title">{{toolsTitle?.name}}</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-item">
+      <div class="section" ariaEnabled [role]="'region'" [ariaLabelID]="'aria-other-block'">
+        <div class="clr-row">
+          <div class="clr-col">
+            <div class="footer-block">
+              <img src="assets/img/eu_white_200x45_en.png" *ngIf="route?.lang=='en'"/>
+              <img src="assets/img/eu_white_200x45_lv.png" *ngIf="route?.lang=='lv'"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+

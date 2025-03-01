@@ -1,0 +1,20 @@
+<div class="title-block"  *ngIf="initialized==true">
+  <p class="p6 mod--no-gap">{{titlesVO?.legend_list_title}}</p>
+</div>
+
+
+<ng-container  *ngIf="initialized==true && dataIsNotComplete==false">
+  <ng-container *ngFor="let item of data">
+    <div class="list-item">
+      <div class="item-color" [ngStyle]="{'background-color': item.color}"></div>
+      <p class="p7 item-txt mod--no-gap">{{item.id}} - {{item.name.name}}</p>
+    </div>
+  </ng-container>
+</ng-container>
+
+<ng-container *ngIf="dataIsNotComplete==true">
+  <p class="p8 item-txt mod--no-gap">{{noDataTitle?.name}}</p>
+</ng-container>
+
+
+

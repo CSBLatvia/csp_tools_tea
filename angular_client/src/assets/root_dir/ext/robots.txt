@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tools.csb.gov.lv/tea/sitemap.xml

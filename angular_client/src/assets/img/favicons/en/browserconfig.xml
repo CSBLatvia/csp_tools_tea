@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+  <msapplication>
+    <tile>
+      <square70x70logo src="https://tools.csb.gov.lv/tea/assets/img/favicons/en/favicon_win_70x70.png"/>
+      <square144x144logo src="https://tools.csb.gov.lv/tea/assets/img/favicons/en/favicon_win_144x144.png"/>
+      <square150x150logo src="https://tools.csb.gov.lv/tea/assets/img/favicons/en/favicon_win_150x150.png"/>
+      <square270x270logo src="https://tools.csb.gov.lv/tea/assets/img/favicons/en/favicon_win_270x270.png"/>
+      <square310x310logo src="https://tools.csb.gov.lv/tea/assets/img/favicons/en/favicon_win_310x310.png"/>
+      <wide310x150logo src="https://tools.csb.gov.lv/tea/assets/img/favicons/en/favicon_win_310x150.png"/>
+      <TileColor>#000000</TileColor>
+    </tile>
+  </msapplication>
+</browserconfig>

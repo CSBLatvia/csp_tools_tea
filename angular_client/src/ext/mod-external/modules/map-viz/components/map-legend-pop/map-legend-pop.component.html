@@ -1,0 +1,55 @@
+<ng-container *ngIf="mobile==true && visible==true">
+  <div class="pop-legend-mobile">
+      <div class="legend-container">
+        <div [ngClass]="'close-mobile'" (click)="onCloseClick()"></div>
+        <div class="container-vertical">
+          <div class="block-vertical">
+            <div class="legend-block">
+              <app-legend-clusters-vertical [clusters]="clusters" [lang]="lang" [impossibleData]="impossibleData" [zerroData]="zerroData" [titlesVO]="titlesVO" [dataIsNotComplete]="dataIsNotComplete"></app-legend-clusters-vertical>
+            </div>
+            <div class="sizes-block">
+              <app-legend-sizes [lang]="lang" [titlesVO]="titlesVO" [dataIsNotComplete]="dataIsNotComplete"></app-legend-sizes>
+            </div>
+            <div class="circles-block" *ngIf="isVisible_circles==true">
+              <app-legend-circles [horizontal]="horizontal" [lang]="lang" [titlesVO]="titlesVO" [dataIsNotComplete]="dataIsNotComplete"></app-legend-circles>
+            </div>
+          </div>
+          <div class="block-vertical">
+            <div class="list-block" *ngIf="isVisible_list==true">
+              <app-legend-list [horizontal]="horizontal" [lang]="lang" [titlesVO]="titlesVO" ></app-legend-list>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</ng-container>
+<ng-container *ngIf="mobile==false && visible==true">
+  <div class="pop-legend-desktop">
+      <div class="legend-container">
+        <div [ngClass]="'close-desktop'" (click)="onCloseClick()"></div>
+        <div class="container-vertical">
+          <div class="block-vertical">
+            <div class="legend-block">
+              <app-legend-clusters-vertical [clusters]="clusters" [lang]="lang" [impossibleData]="impossibleData" [zerroData]="zerroData" [titlesVO]="titlesVO" [dataIsNotComplete]="dataIsNotComplete"></app-legend-clusters-vertical>
+            </div>
+            <div class="sizes-block">
+              <app-legend-sizes [lang]="lang" [titlesVO]="titlesVO" [dataIsNotComplete]="dataIsNotComplete"></app-legend-sizes>
+            </div>
+            <div class="circles-block" *ngIf="isVisible_circles==true">
+              <app-legend-circles [horizontal]="horizontal" [lang]="lang" [titlesVO]="titlesVO" [dataIsNotComplete]="dataIsNotComplete"></app-legend-circles>
+            </div>
+          </div>
+          <div class="block-vertical" *ngIf="isVisible_list==true">
+            <div class="list-block" *ngIf="isVisible_list==true">
+              <app-legend-list [horizontal]="horizontal" [lang]="lang" [titlesVO]="titlesVO"></app-legend-list>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</ng-container>
+
+
+
+
+

@@ -1,0 +1,154 @@
+/////////////////////////////////////
+// TOP -MENU-SIZE
+/////////////////////////////////////
+
+@use "sass:math";
+
+$app-top-menu-height: 60px;
+$app-footer-height: 40px;
+$app-landing-image-min-height: 200px;
+$app-settings-min-width: 520px;
+$app-padding-default: 6px;
+$app-border-radius-default: 3px;
+$app-border-width: 0.7px;
+$app-app-background:  #ffffff;// #eceeef;//hardcoded
+
+$app-content-area-padding-top: 1rem;
+$app-content-area-padding-right: 1rem;
+$app-content-area-padding-bottom: 1rem;
+$app-content-area-padding-left: 1rem;
+
+$app-content-area-padding-mob: 0.25rem;
+
+/*TODO */
+$app-max-width-top-menu:100%;
+$app-max-width-top-menu-content:1116px;
+
+$app-max-width-landing:100%;
+$app-max-width-landing-content:1116px;
+
+$app-max-width-content:1116px;
+
+$app-max-width-footer:100%;
+$app-max-width-footer-content:1116px;
+/////////////////////////
+
+/////////////////////////////////////
+// map
+/////////////////////////////////////
+$app-pop-up-max-width: 260px;
+$app-map-menu-width: 500px;
+
+// GAP
+/////////////////////////
+//baseSize:16px;
+$app-gap-2: 1rem*0.125;
+$app-gap-4: 1rem*0.25;
+$app-gap-8: 1rem*0.5;
+$app-gap-16: 1rem;
+
+@mixin gradientTopBottom($start-colour, $end-colour) {
+  background-color: $start-colour;
+  background-image: -webkit-gradient(linear, left to bottom, left bottom, from($start-colour), to($end-colour));
+  background-image: -webkit-linear-gradient(to bottom, $start-colour, $end-colour);
+  background-image: -moz-linear-gradient(to bottom, $start-colour, $end-colour);
+  background-image: -ms-linear-gradient(to bottom, $start-colour, $end-colour);
+  background-image: -o-linear-gradient(to bottom, $start-colour, $end-colour);
+  background-image: linear-gradient(to bottom, $start-colour, $end-colour);
+  filter:           progid:DXImageTransform.Microsoft.gradient(start-colourStr='#{$start-colour}', end-colourStr='#{$end-colour}');
+}
+@mixin aspectRatio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: math.div($height, $width) * 100%;
+  }
+}
+@mixin aspectRatioMinHeight($width, $height) {
+    width: 100%;
+    min-height: math.div($height, $width) * 100% + 13px;
+}
+@mixin noGap() {
+  padding: 0;
+  margin: 0;
+}
+
+///////////////////////////////////
+/// maybe usseless....
+///////////////////////////////////
+@mixin cursorTouch(){
+  pointer-events: auto;
+  touch-action: auto;
+  cursor: pointer;
+}
+@mixin cursorAuto(){
+  pointer-events: auto;
+  touch-action: auto;
+  cursor: auto;
+}
+@mixin cursorNone(){
+  pointer-events: none;
+  touch-action: none;
+}
+@mixin defaultDropShadow($color:rgba(0,0,0,0.3)){
+  -webkit-box-shadow: 0 4px 8px 0 $color !important;
+  -moz-box-shadow: 0 4px 8px 0 $color !important;
+  box-shadow: 0 4px 8px 0 $color !important;
+}
+@mixin smallDropShadow(){
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3) !important;
+  -moz-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3) !important;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3) !important;
+}
+@mixin defaultTextShadow(){
+  text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.15);
+}
+@mixin topMenuDropShadow(){
+  -webkit-box-shadow: 0 4px 12px 0 rgba(0,0,0,0.15) !important;
+  -moz-box-shadow: 0 4px 12px 0 rgba(0,0,0,0.15) !important;
+  box-shadow: 0 4px 12px 0 rgba(0,0,0,0.15) !important;
+}
+@mixin noneSelectableText() {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  outline: none !important;
+}
+@mixin debugBorder(){
+  //border-style: solid;
+  //border-width: 1px;
+  //border-color: fuchsia;
+}
+@mixin defaultGrayBorder(){
+  border-radius: .125rem;
+  border: 1px solid #d7d7d7;
+}
+@mixin defaultGrayBorderTop(){
+  border-top-color: #d7d7d7;
+  border-top-style: solid;
+  border-top-width: 1px;
+}
+@mixin debugLabel(){
+    color: #ffffff;
+    top: 50% !important;
+    left: 50% !important;
+    translate: -50% -50%;
+    position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+

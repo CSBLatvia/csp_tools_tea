@@ -1,0 +1,28 @@
+<button class="error" (click)="openWindow()">
+  <clr-icon shape="error-standard" class="is-solid error-ico" size="20"></clr-icon>
+  <span>no data error</span>
+</button>
+
+<ng-container *ngIf="open===true">
+  <div class="modal">
+    <div class="modal-dialog modal-sm" role="dialog" aria-hidden="true">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title">{{ data.error_title }}</h1>
+          <h4 class="modal-title">{{ data.error_msg }}</h4>
+        </div>
+        <div class="modal-body">
+          <span class="label-p5" [innerHTML]="data.error_detail"></span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary btn-block" (click)="closeWindow()">aizvērt</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-backdrop" aria-hidden="true" (click)="closeWindow()"></div>
+</ng-container>
+
+
+
+

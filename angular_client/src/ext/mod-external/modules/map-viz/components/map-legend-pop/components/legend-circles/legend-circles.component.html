@@ -1,0 +1,14 @@
+<div class="title-block"  *ngIf="initialized==true">
+  <p class="p6 mod--no-gap">{{titlesVO?.legend_circles_title}}</p>
+</div>
+
+<ng-container *ngIf="initialized==true">
+    <div class="list-item">
+      <div class="circle-color" [ngStyle]="{'border-color': dataVO_w?.color}"></div>
+      <p class="p8 item-txt mod--no-gap">{{dataVO_w?.name.name}}</p>
+    </div>
+    <div class="list-item">
+      <div class="circle-color" [ngStyle]="{'border-color': dataVO_h?.color}"></div>
+      <p class="p8 item-txt mod--no-gap">{{dataVO_h?.name.name}}</p>
+    </div>
+</ng-container>

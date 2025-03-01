@@ -1,0 +1,97 @@
+
+@import "../../../../css/app-main-vars";
+@import "../../../../css/app-colors";
+
+
+.pointerEventsEnabled{
+  pointer-events: auto;
+  touch-action: auto;
+}
+.pointerEventsDisabled{
+  pointer-events: none;
+  touch-action: none;
+}
+
+.share-button-container{
+  width: 100%;
+  height: 30px;
+}
+.share-button{
+  display: inline-flex;
+  justify-items: center;
+  align-items: center;
+  float: right;
+  width: auto;
+  height: 30px;
+}
+.share-icon{
+  flex-wrap: nowrap;
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  border-radius: 3px;
+  @include smallDropShadow();
+}
+.ico{
+  margin: 0.25rem;
+  width: 18px;
+  height: 18px;
+  fill: $app-col-primary-dark;
+  touch-action: auto;
+  pointer-events: auto;
+  cursor: pointer;
+}
+.share-info{
+  width: fit-content;
+  height: auto;
+  display: inline-block;
+  float: right;
+  background-color: #656565;
+  color: #ffffff;
+  border-radius: $app-border-radius-default * 1.5;
+  font-size: var(--clr-p6-font-size) !important;
+  font-weight: var(--clr-p6-font-weight) !important;
+  line-height: var(--clr-p6-font-size) !important;
+  padding: 0.28rem;
+  animation: cssAnimation 5s forwards;
+}
+@keyframes cssAnimation {
+  0%   {opacity: 1;}
+  90%  {opacity: 0.8;}
+  100% {opacity: 0;}
+}
+
+.modal-dialog{
+  @extend .modal-dialog;
+}
+
+  .modal-backdrop{
+    background-color: $app-col-primary-dark !important;
+  }
+
+
+
+.modal-footer{
+  display: block !important;
+}
+.btn{
+  padding: 0 !important;
+  margin-bottom: 0.25rem !important;
+}
+h4{
+  border: none !important;
+  user-select: none !important;
+}
+.modal-title{
+  border: none !important;
+  user-select: none !important;
+}
+.modal-body{
+  border-style: solid;
+  border-color: $app-col-gray-2;
+  border-radius: $app-border-radius-default;
+  border-width: 1px;
+  padding: 0.25rem;
+  line-height: 1rem;
+  user-select: text;
+}

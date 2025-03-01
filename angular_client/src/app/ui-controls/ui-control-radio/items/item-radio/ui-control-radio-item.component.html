@@ -1,0 +1,4 @@
+<div class="ui-control-item-block">
+    <div [ngClass]="(value && value.active==true)?'radio-on':'radio-off'"></div>
+    <span class="ui-control-item-label" *ngIf="value">{{value.name?.name}}</span>
+</div>

@@ -1,0 +1,52 @@
+
+<!--
+<app-ui-control-dropdown *ngIf="initialized==true" [control_id]="'m2_1'" (onChange)="onChange_1($event)" [values]="sx_data" [id]="sx" [lang]="lang" [label]="label_horizontal" [itemsMinCount]="3" [itemsMaxCount]="3"></app-ui-control-dropdown>
+<app-ui-control-dropdown *ngIf="initialized==true" [control_id]="'m2_2'" (onChange)="onChange_2($event)" [values]="sy_data" [id]="sy" [lang]="lang" [label]="label_vertical" [itemsMinCount]="3" [itemsMaxCount]="3"></app-ui-control-dropdown>
+-->
+
+<ng-container *ngIf="mobile==false">
+   <div class="clr-row">
+     <div class="clr-col-6">
+       <div class="clr-row">
+         <div class="clr-col">
+           <app-ui-control-dropdown *ngIf="initialized==true" [control_id]="'m2_1'" (onChange)="onChange_1($event)" [values]="sx_data" [id]="sx" [lang]="lang" [label]="label_horizontal" [itemsMinCount]="3" [itemsMaxCount]="3"></app-ui-control-dropdown>
+         </div>
+       </div>
+       <div class="clr-row">
+         <div class="clr-col">
+           <app-ui-control-radio [horizontal]="true" [values]="axisValuesX" [id]="x_type_id"  (updateOnChange)="onChangeX($event)" ></app-ui-control-radio>
+         </div>
+       </div>
+     </div>
+     <div class="clr-col-6">
+       <div class="clr-row">
+         <div class="clr-col">
+           <app-ui-control-dropdown *ngIf="initialized==true" [control_id]="'m2_2'" (onChange)="onChange_2($event)" [values]="sy_data" [id]="sy" [lang]="lang" [label]="label_vertical" [itemsMinCount]="3" [itemsMaxCount]="3"></app-ui-control-dropdown>
+         </div>
+       </div>
+       <div class="clr-row">
+         <div class="clr-col">
+           <app-ui-control-radio [horizontal]="true" [values]="axisValuesY" [id]="y_type_id"  (updateOnChange)="onChangeY($event)" ></app-ui-control-radio>
+         </div>
+       </div>
+     </div>
+   </div>
+</ng-container>
+<ng-container *ngIf="mobile==true">
+  <div class="clr-row">
+    <div class="clr-col-12">
+      <app-ui-control-dropdown *ngIf="initialized==true" [control_id]="'m2_1'" (onChange)="onChange_1($event)" [values]="sx_data" [id]="sx" [lang]="lang" [label]="label_horizontal" [itemsMinCount]="3" [itemsMaxCount]="3"></app-ui-control-dropdown>
+    </div>
+    <div class="clr-col-12">
+      <app-ui-control-radio [horizontal]="true" [values]="axisValuesX" [id]="x_type_id"  (updateOnChange)="onChangeX($event)" ></app-ui-control-radio>
+    </div>
+  </div>
+  <div class="clr-row">
+    <div class="clr-col-12">
+      <app-ui-control-dropdown *ngIf="initialized==true" [control_id]="'m2_2'" (onChange)="onChange_2($event)" [values]="sy_data" [id]="sy" [lang]="lang" [label]="label_vertical" [itemsMinCount]="3" [itemsMaxCount]="3"></app-ui-control-dropdown>
+    </div>
+    <div class="clr-col-12">
+      <app-ui-control-radio [horizontal]="true" [values]="axisValuesY" [id]="y_type_id"  (updateOnChange)="onChangeY($event)" ></app-ui-control-radio>
+    </div>
+  </div>
+</ng-container>

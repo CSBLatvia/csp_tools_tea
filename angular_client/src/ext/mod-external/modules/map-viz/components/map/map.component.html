@@ -1,0 +1,8 @@
+<div id="mapArea" #mapArea [ngClass]="mapIsFullScreen==false?'csb-map-container':'csb-map-container-full'" *ngIf="initialized==true">
+    <app-mapbox
+      [route]="route"
+      [lang]="lang"
+      [initialized]="initialized"
+      [domID] = "domID"
+    ></app-mapbox>
+</div>

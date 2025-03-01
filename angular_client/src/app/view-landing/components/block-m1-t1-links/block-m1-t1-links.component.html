@@ -1,0 +1,68 @@
+<ng-container #view>
+  <div *ngIf="mobile==true" [ngClass]="open==true?'expandable-block-open':'expandable-block-close'">
+    <div class="expandable-block-title-mob" (click)="onOpenClose()">
+      <h3 class="h3-title">{{titleVO?.name}}</h3>
+      <clr-icon shape="angle" [dir]="open==true?'up':'down'" size="24" class="ico-expandable"></clr-icon>
+    </div>
+    <div [ngClass]="open==true?'expandable-block-content-mob':'expandable-block-content-mob-hidden'">
+      <clr-tabs>
+        <clr-tab>
+          <button clrTabLink>{{ tabVO_1?.name }}</button>
+          <clr-tab-content *clrIfActive>
+
+            <div class="tab-content">
+              <ng-container *ngFor="let item of links_1;index as i">
+                <a routerLink="/{{item.link}}/"><span>{{item.name.name}}</span><clr-icon shape="angle" dir="right" class="ico-link"></clr-icon></a><br>
+              </ng-container>
+            </div>
+
+          </clr-tab-content>
+        </clr-tab>
+        <clr-tab>
+          <button clrTabLink>{{ tabVO_2?.name }}</button>
+          <clr-tab-content *clrIfActive>
+            <div class="tab-content">
+              <ng-container *ngFor="let item of links_2;index as i">
+                <a routerLink="/{{item.link}}/"><span>{{item.name.name}}</span><clr-icon shape="angle" dir="right" class="ico-link"></clr-icon></a><br>
+              </ng-container>
+            </div>
+          </clr-tab-content>
+        </clr-tab>
+      </clr-tabs>
+    </div>
+  </div>
+  <div class="expandable-block-desktop" *ngIf="mobile==false">
+    <div class="expandable-block-title">
+      <h3 class="h3-title">{{titleVO?.name}}</h3>
+    </div>
+
+    <div class="expandable-block-content-desktop">
+      <clr-tabs>
+        <clr-tab>
+          <button clrTabLink>{{ tabVO_1?.name }}</button>
+          <clr-tab-content *clrIfActive>
+
+            <div class="tab-content">
+              <ng-container *ngFor="let item of links_1;index as i">
+                <a routerLink="/{{item.link}}/"><span>{{item.name.name}}</span><clr-icon shape="angle" dir="right" class="ico-link"></clr-icon></a><br>
+              </ng-container>
+            </div>
+
+          </clr-tab-content>
+        </clr-tab>
+        <clr-tab>
+          <button clrTabLink>{{ tabVO_2?.name }}</button>
+          <clr-tab-content *clrIfActive>
+            <div class="tab-content">
+              <ng-container *ngFor="let item of links_2;index as i">
+                <a routerLink="/{{item.link}}/"><span>{{item.name.name}}</span><clr-icon shape="angle" dir="right" class="ico-link"></clr-icon></a><br>
+              </ng-container>
+            </div>
+          </clr-tab-content>
+        </clr-tab>
+      </clr-tabs>
+    </div>
+  </div>
+</ng-container>
+
+

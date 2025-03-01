@@ -1,0 +1,144 @@
+@import "app-main-vars";
+@import "app-colors";
+
+$color-normal: $app-col-primary-dark;
+
+$arrow-pos: 12px;
+$max-width: 180px;
+
+
+.pop-container-map{
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+
+  padding: 0;
+  margin: 0;
+  pointer-events: none;
+
+  width: max-content;
+  height: max-content;
+
+  @include defaultDropShadow();
+}
+.pop-container{
+  @extend .pop-container-map;
+  width: $app-pop-up-max-width;
+  max-width: $app-pop-up-max-width;
+  min-width: $app-pop-up-max-width;
+}
+.pop-title{
+  margin: 0 !important;
+  padding: 0.125rem;
+  padding-left: 0.5rem;
+  padding-right: 0.25rem;
+  color: #ffffff !important;
+}
+.pop-txt{
+  position: inherit;
+  margin: 0 !important;
+  padding: 0.125rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  color: $app-col-gray-10;
+  background-color: #ffffff;
+  width: auto;
+  overflow-wrap: normal;
+}
+.pop-txt-colorized{
+  @extend .pop-txt;
+  color: #ffffff !important;
+  border-radius: $app-border-radius-default;
+}
+.pop-spinner{
+  position: inherit;
+  margin: 0;
+  padding: 0.5rem;
+  background-color: #ffffff;
+  height: 2rem;
+}
+
+.last{
+  border-bottom-left-radius: $app-border-radius-default;
+  border-bottom-right-radius: $app-border-radius-default;
+}
+.pop-content{
+  position: inherit;
+  margin: 0 !important;
+  padding: 0.125rem;
+  background-color: #ffffff;
+  width: auto;
+  overflow-wrap: normal;
+
+  border-bottom-left-radius: $app-border-radius-default;
+  border-bottom-right-radius: $app-border-radius-default;
+
+  table{
+    margin:0 !important;
+    padding:0;
+    tr{
+      margin:0;
+      padding:0;
+      border: none !important;
+    }
+    th{
+      margin:0 !important;
+      padding:0;
+      border: none !important;
+    }
+    thead{
+      margin:0 !important;
+      padding:0 !important;
+      border: none !important;
+    }
+    tbody{
+      margin:0;
+      padding:0;
+    }
+    td{
+      margin:0;
+      padding:0;
+    }
+  }
+}
+
+
+/////////// pop ////////////////////////
+.pop {
+  position: relative;
+  background-color: $color-normal;
+  border: 1px solid $color-normal;
+  border-radius: $app-border-radius-default;
+}
+.pop:after, .pop:before {
+  right: 100%;
+  top: $arrow-pos;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.pop:after {
+  border-color: rgba(0, 0, 0, 0);
+  border-right-color: $color-normal;
+  border-width: 4px;
+  margin-top: -4px;
+}
+.pop:before {
+  border-color: rgba(0, 0, 0, 0);
+  border-right-color:  $color-normal;
+  border-width: 5px;
+  margin-top: -5px;
+}
+.visible{
+  display: block;
+}
+.hidden{
+  display: none;
+}
+
+
+

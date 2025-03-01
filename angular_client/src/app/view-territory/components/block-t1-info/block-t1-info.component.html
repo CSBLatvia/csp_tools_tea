@@ -1,0 +1,137 @@
+<ng-container #view>
+  <div *ngIf="mobile==true" [ngClass]="open==true?'expandable-block-open':'expandable-block-close'">
+    <div class="expandable-block-title-mob" (click)="onOpenClose()">
+      <h3 class="h3-title">{{titleVO?.name}}</h3>
+      <clr-icon shape="angle" [dir]="open==true?'up':'down'" size="24" class="ico-expandable"></clr-icon>
+    </div>
+    <div [ngClass]="open==true?'expandable-block-content-mob':'expandable-block-content-mob-hidden'">
+      <div class="clr-row">
+        <div class="clr-col-12">
+          <ng-container *ngIf="info!==null">
+            <div class="info-container">
+              <div *ngFor="let item of info?.data; index as i" class="row">
+                <ng-container *ngIf="item.valueSTR!==''">
+                  <span>{{item.name}}</span><br>
+                  <span><b>{{item.valueSTR}}</b></span>
+                </ng-container>
+                <ng-container *ngIf="item.valueSTR==''">
+                  <span [innerHTML]="item.name"></span><br>
+                </ng-container>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+        <div class="clr-col-12">
+          <div class="component-container-aspect-2-1" [id]="'cont-'+id">
+            <div class="component">
+              <app-comp-map-territory
+                [model]="model"
+                [route]="route"
+                [URL]="component_link"
+                [visible]="open"
+              ></app-comp-map-territory>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ng-container *ngIf="route.M2=='e'">
+        <div class="clr-row">
+          <div class="clr-col">
+            <div class="component-container" [id]="'cont-'+id_out">
+              <div class="component">
+                <app-comp-pie-chart
+                  [model]="model"
+                  [route]="routeOther_out"
+                  [URL]="pie_chart_link_out"
+                  [visible]="open"
+                ></app-comp-pie-chart>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clr-row">
+          <div class="clr-col">
+            <div class="component-container" [id]="'cont-'+id_in" [ngStyle]="{'margin-top':'0'}">
+              <div class="component">
+                <app-comp-pie-chart
+                  [model]="model"
+                  [route]="routeOther_in"
+                  [URL]="pie_chart_link_in"
+                  [visible]="open"
+                ></app-comp-pie-chart>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <div class="expandable-block-desktop" *ngIf="mobile==false">
+    <div class="expandable-block-title">
+      <h3 class="h3-title">{{titleVO?.name}}</h3>
+    </div>
+
+    <div class="expandable-block-content-desktop">
+      <div class="clr-row">
+        <div class="clr-col-4">
+          <ng-container *ngIf="info!==null">
+            <div class="info-container">
+              <div *ngFor="let item of info?.data; index as i" class="row">
+                <ng-container *ngIf="item.valueSTR!==''">
+                  <span>{{item.name}}</span><br>
+                  <span><b>{{item.valueSTR}}</b></span>
+                </ng-container>
+                <ng-container *ngIf="item.valueSTR==''">
+                  <span [innerHTML]="item.name"></span><br>
+                </ng-container>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+        <div class="clr-col-8">
+          <div class="component-container-aspect-2-1" [id]="'cont-'+id">
+            <div class="component">
+              <!--<iframe [src]="component_link | safe" width="100%" height="100%" [id]="'iframe-'+id"   [attr.type]="'none'"></iframe>-->
+              <app-comp-map-territory
+                [model]="model"
+                [route]="route"
+                [URL]="component_link"
+                [visible]="true"
+              ></app-comp-map-territory>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ng-container *ngIf="route.M2=='e'">
+          <div class="clr-row">
+            <div class="clr-col">
+              <div class="component-container" [id]="'cont-'+id_out">
+                <div class="component">
+                  <app-comp-pie-chart
+                    [model]="model"
+                    [route]="routeOther_out"
+                    [URL]="pie_chart_link_out"
+                    [visible]="true"
+                  ></app-comp-pie-chart>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="clr-row">
+            <div class="clr-col">
+              <div class="component-container" [id]="'cont-'+id_in" [ngStyle]="{'margin-top':'0'}">
+                <div class="component">
+                  <app-comp-pie-chart
+                    [model]="model"
+                    [route]="routeOther_in"
+                    [URL]="pie_chart_link_in"
+                    [visible]="true"
+                  ></app-comp-pie-chart>
+                </div>
+              </div>
+            </div>
+          </div>
+      </ng-container>
+    </div>
+  </div>
+</ng-container>

@@ -1,0 +1,14 @@
+<admin-login *ngIf="service.authorized==false"></admin-login>
+
+<ng-container *ngIf="service.authorized==true">
+    <app-top-menu></app-top-menu>
+    <app-table-list [id]="0" [tables]="['translations','texts_pop','texts_title']" (onTableChose)="onTableChoose($event)"></app-table-list>
+
+    <app-view-translations  *ngIf="tableID==0" [user]="service.user"></app-view-translations>
+    <app-view-texts-pop     *ngIf="tableID==1"></app-view-texts-pop>
+    <app-view-texts-title   *ngIf="tableID==2"></app-view-texts-title>
+
+</ng-container>
+
+
+

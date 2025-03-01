@@ -1,0 +1,50 @@
+<div class="ui-control">
+  <h3 *ngIf="t1_label" class="h3-title">{{t1_label?.name}}</h3>
+  <div class="clr-row">
+    <div class="clr-col">
+
+      <div [ngClass]="t1_data.length>0?(t1_data[0].id==route.T1?'svg-active':'svg'):'svg'" (click)="onChange(t1_data[0])">
+            <div  class="svg-item">
+              <div class="svg-item-content">
+                <div class="svg-ico">
+                  <div class="ico svg-3"></div>
+                </div>
+              </div>
+            </div>
+            <span *ngIf="t1_data.length>0" class="p4 info">{{t1_data[0].name.name}}</span>
+      </div>
+
+    </div>
+    <div class="clr-col">
+
+      <div [ngClass]="t1_data.length>0?(t1_data[1].id==route.T1?'svg-active':'svg'):'svg'" (click)="onChange(t1_data[1])">
+            <div  class="svg-item">
+              <div class="svg-item-content">
+                <div class="svg-ico">
+                  <div class="ico svg-4"></div>
+                </div>
+              </div>
+            </div>
+            <span *ngIf="t1_data.length>0" class="p4 info">{{t1_data[1].name.name}}</span>
+      </div>
+
+
+    </div>
+    <div class="clr-col">
+
+      <div [ngClass]="t1_data.length>0?(t1_data[2].id==route.T1?'svg-active':'svg'):'svg'" (click)="onChange(t1_data[2])">
+              <div  class="svg-item">
+                <div class="svg-item-content">
+                  <div class="svg-ico">
+                    <div class="ico svg-7"></div>
+                  </div>
+                </div>
+              </div>
+              <span *ngIf="t1_data.length>0" class="p4 info">{{t1_data[2].name.name}}</span>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+

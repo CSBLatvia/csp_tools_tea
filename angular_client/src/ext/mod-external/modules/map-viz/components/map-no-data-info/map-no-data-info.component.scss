@@ -1,0 +1,24 @@
+@import "../../../../../../css/app-main-vars";
+@import "../../../../../../css/app-colors";
+
+.mapNoDataInfo{
+  top: 50%;
+  left: 50%;
+  background-color: $app-col-alert;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  padding: 0.2rem 0.4rem;
+  pointer-events: none;
+  touch-action: none;
+  border-radius: $app-border-radius-default;
+
+  @include defaultDropShadow();
+
+  span{
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+    line-height: 1rem;
+  }
+
+}

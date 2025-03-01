@@ -1,0 +1,13 @@
+@import "../../../../css/app-colors";
+@import "../../../../css/ui-expandable";
+
+.download-block{
+  display: flex;
+  padding: .5rem;
+  justify-content: flex-end;
+  align-items: center;
+  span{
+    margin: 0 !important;
+    padding-right: 0.5rem;
+  }
+}

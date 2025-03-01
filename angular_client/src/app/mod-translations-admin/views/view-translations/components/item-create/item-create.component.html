@@ -1,0 +1,40 @@
+  <div class="item-create" #itemRef>
+    <h1 class="h1">{{titleVO?.name}}</h1>
+    <div class="clr-row clr-justify-content-between title-modify">
+      <div class="clr-col">
+        <span>item-key:</span>
+        <span class="edit-field-modify" [contentEditable]="true" #id spellcheck="false">{{vo.id}}</span>
+      </div>
+      <div class="clr-col">
+        <div class="checkbox-area">
+          <span class="checkbox-title">used:</span>
+          <input type="checkbox" class="checkbox" (change)="onCheckBoxChange(1)" [checked]="vo.used"/>
+          <span class="checkbox-title">html:</span>
+          <input type="checkbox" class="checkbox" (change)="onCheckBoxChange(2)" [checked]="vo.html"/>
+        </div>
+      </div>
+    </div>
+    <div class="clr-row">
+      <div class="clr-col">
+        <span>name_lv:</span>
+      </div>
+      <div class="clr-col">
+        <span>name_en:</span>
+      </div>
+    </div>
+    <div class="clr-row">
+      <div class="clr-col">
+        <span class="edit-field-modify" [contentEditable]="true" #nameLV spellcheck="false">{{vo.name_lv}}</span>
+      </div>
+      <div class="clr-col">
+        <span  class="edit-field-modify" [contentEditable]="true" #nameEN spellcheck="false">{{vo.name_en}}</span>
+      </div>
+    </div>
+    <div class="clr-row">
+      <div class="clr-col">
+        <button class="btn btn-primary" (click)="onCancelClick()">{{cancelVO?.name}}</button>
+        <button class="btn btn-primary" (click)="onSaveClick()">{{saveVO?.name}}</button>
+      </div>
+    </div>
+  </div>
+

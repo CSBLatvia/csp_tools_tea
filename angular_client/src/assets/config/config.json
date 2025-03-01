@@ -1,0 +1,59 @@
+{
+  "hostURL":"https://tools.csb.gov.lv/tea_3",
+  "serviceURL":"https://tools.csb.gov.lv/tea_3/api",
+  "externalComponentsURL": "https://tools.csb.gov.lv/tea_3/external",
+  "translationsFrom": "db",
+
+  "geoServerTilesURL":"https://tools.csb.gov.lv/geo_server/gwc/service/wmts?REQUEST=GetTile&SERVICE=WMTS&VERSION=1.0.0&LAYER=ird:[layer]&STYLE=&TILEMATRIX=EPSG:900913:{z}&TILEMATRIXSET=EPSG:900913&FORMAT=application/vnd.mapbox-vector-tile&TILECOL={x}&TILEROW={y}",
+  "osmTilesURL": "https://a.tile.openstreetmap.org/{z}/{x}/{y}.png",
+  "ortoTilesURL": "https://lvmgeoserver.lvm.lv/geoserver/public/wms?bbox={bbox-epsg-3857}&format=image/jpeg&transparent=false&request=GetMap&srs=EPSG:3857&width=128&height=128&layers=Orto_LKS",
+
+
+
+
+  "mapBoxLayer_1": "territories_lv_3857_1_latest",
+  "mapBoxLayer_3": "territories_lv_3857_3_latest",
+  "mapBoxLayer_4": "territories_lv_3857_4_latest",
+  "mapBoxLayer_7": "territories_lv_3857_7_2019",
+
+  "theme_color": "#1B3F68",
+
+  "mapColors": {
+    "map_colors_w": [
+      "#578C9B",
+      "#7FB4C4,#306674",
+      "#A8DDEE,#578C9B,#004250",
+      "#A8DDEE,#72A6B6,#3E7281,#004250",
+      "#A8DDEE,#7FB4C4,#578C9B,#306674,#004250"
+    ],
+    "map_colors_h": [
+      "#578C9B",
+      "#7FB4C4,#306674",
+      "#A8DDEE,#578C9B,#004250",
+      "#A8DDEE,#72A6B6,#3E7281,#004250",
+      "#A8DDEE,#7FB4C4,#578C9B,#306674,#004250"
+    ],
+    "map_border_color_w": "#000000",
+    "map_border_color_h": "#000000",
+    "map_no_value_color": "#838383",
+    "map_zero_color": "#ffffff",
+    "territory_border_color": "#3376C4"
+  },
+  "configViz": {
+    "strokeColor_w": "#D3145A",
+    "strokeColor_h": "#3D85FF",
+    "strokeWidth": "2",
+    "minCircleRadius": "12",
+    "maxCircleDiameterPercentage": "0.35"
+  },
+
+  "color_categories": "#e69f00,#56b4e9,#009e73,#f0e442,#0072b2,#d55e00,#cc79a7,#838383",
+  "work_color": "#D3145A",
+  "home_color": "#3D85FF",
+
+  "stats_id":"7"
+
+
+
+
+}

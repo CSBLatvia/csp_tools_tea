@@ -1,0 +1,36 @@
+<div class="title-block" *ngIf="initialized==true">
+  <p class="p6 mod--no-gap">{{titlesVO?.legend_clusters_title}}</p>
+</div>
+
+
+    <div class="map-legend-horizontal" *ngIf="initialized==true && dataIsNotComplete==false">
+      <div class="map-legend-container">
+        <div [class]="'map-legend-item'">
+          <div class="legendColors">
+            <ng-container *ngFor="let vo of clusters">
+              <div class="legendItem">
+                <div class="colorDiv" [ngStyle]="{'background-color': vo.color}"></div>
+                <span class="item-txt p8" *ngIf="vo.bordersEqual==true">{{vo.borderOne}}</span>
+                <span class="item-txt p8" *ngIf="vo.bordersEqual==false">{{vo.borderOne}} - {{vo.borderTwo}}</span>
+              </div>
+            </ng-container>
+
+            <div class="legendItem" *ngIf="zerroData===true">
+              <div class="colorDiv"></div>
+              <span class="item-txt p8">0</span>
+            </div>
+            <div class="legendItem" *ngIf="impossibleData===true">
+              <div class="colorDiv" [ngStyle]="{'background-color':impossibleColor}"></div>
+              <span class="item-txt p8">{{titleImpossibleVO?.name}}</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+<ng-container *ngIf="dataIsNotComplete==true">
+    <p class="p8 item-txt mod--no-gap">{{noDataTitle?.name}}</p>
+</ng-container>
+
+

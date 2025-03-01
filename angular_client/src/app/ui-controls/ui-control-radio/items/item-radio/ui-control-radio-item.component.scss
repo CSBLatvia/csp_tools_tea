@@ -1,0 +1,27 @@
+@import "../../../../../css/app-main-vars";
+@import "../../../../../css/app-colors";
+@import "../../../../ui-controls/css/ui-controls.scss";
+
+.radio{
+  margin: $ui-control-padding;
+}
+.radio-on{
+  box-sizing: border-box;
+  width: $ui-radio-circle-size;
+  height: $ui-radio-circle-size;
+  background-color: #ffffff;
+  border-radius: $ui-radio-circle-size;
+  border-width: $ui-radio-border-on-width;
+  border-style: solid;
+  border-color: $app-col-primary;
+}
+.radio-off{
+  box-sizing: border-box;
+  width: $ui-radio-circle-size;
+  height: $ui-radio-circle-size;
+  background-color: #ffffff;
+  border-radius: $ui-radio-circle-size;
+  border-width: $ui-radio-border-off-width;
+  border-style: solid;
+  border-color: $app-col-primary;
+}

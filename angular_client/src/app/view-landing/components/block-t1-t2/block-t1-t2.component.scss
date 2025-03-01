@@ -1,0 +1,20 @@
+@import "../../../../css/app-colors";
+@import "../../../../css/ui-expandable";
+
+.expandable-block-title-mob{
+  @extend .expandable-block-title-mob;
+  background-color: $app-col-primary;
+  h3{
+    color:#ffffff;
+  }
+}
+.expandable-block-title{
+  @extend .expandable-block-title;
+  background-color: $app-col-primary;
+  h3{
+    color:#ffffff;
+  }
+  h6{
+    color:#ffffff;
+  }
+}

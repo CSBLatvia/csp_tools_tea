@@ -1,0 +1,77 @@
+@import "../../../../../../../../css/app-main-vars";
+@import "../../../../../../../../css/app-modifiers";
+@import "../../../../../../../../css/app-colors";
+@import "../../../../../../../../css/app-icons";
+
+
+.title-block{
+  padding: 0; margin: 0;
+  padding-bottom: 0.5rem;
+}
+.list-item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+.circle-dotted{
+  width: 1.2rem;
+  height: 1.2rem;
+  margin: 0;padding: 0;
+  background-color: #ffffff;
+  border-radius: 50%;
+
+  ////////////////////
+  border-color: $app-col-gray-4;
+  border-style: dotted;
+  border-width: 0.125rem;
+}
+.circle-normal{
+  width: 1.15rem;
+  height: 1.15rem;
+  margin: 0;padding: 0;
+  background-color: #ffffff;
+
+  ////////////////////
+  border-color: $app-col-gray-3;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-radius: 0.1rem;
+}
+.item-txt{
+  padding: 0;
+  margin: 0;
+  padding-left: 0.2rem;
+}
+.hidden{
+  opacity: 0;
+}
+
+
+/////////////
+.size-circle{
+  margin: 0;padding: 0;
+  background-color: #ffffff;
+
+  ////////////////////
+  border-color: $app-col-gray-4;
+  border-style: dashed;
+  border-width: 1px;
+  box-sizing: content-box;
+  border-radius: 50%;
+}
+.size-square{
+  width: 8px;
+  height: 8px;
+  margin: 0;padding: 0;
+  background-color: #ffffff;
+
+  ////////////////////
+  border-color: $app-col-gray-4;
+  border-style: solid;
+  border-width: 1px;
+  box-sizing: content-box;
+}
+.size-area{
+  margin-right: 0.25rem;
+}

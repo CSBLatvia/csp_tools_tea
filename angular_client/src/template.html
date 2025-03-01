@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="[lang]">
+<head>
+  <meta charset="UTF-8">
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" charset="utf-8">
+  <meta http-equiv="ScreenOrientation"  content="autoRotate:disabled">
+  <meta property="js:version"           content="" />
+
+  <!-- facebook -->
+  <meta property="og:url"             content="[full_path]" />
+  <meta property="og:type"            content="article" />
+  <meta property="og:title"           content="[title]" />
+  <meta property="og:description"     content="[description]" />
+  <meta property="og:image"           content="[meta_FB]" />
+  <meta property="og:image:width"     content="[meta_FB_w]"/>
+  <meta property="og:image:height"    content="[meta_FB_h]"/>
+
+
+  <!-- twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="[full_path]" />
+  <meta name="twitter:creator" content="[owner_name]" />
+  <meta name="twitter:title" content="[title]" />
+  <meta name="twitter:description" content="[description]" />
+  <meta name="twitter:image" content="[meta_TW]" />
+
+
+  <!-- whatsup -->
+  <meta property="og:image"           itemprop="image" content="[meta_WP]" />
+  <meta property="og:image:width"     content="[meta_WP_w]"/>
+  <meta property="og:image:height"    content="[meta_WP_h]"/>
+
+
+  <!-- favicons-lv -->
+  <link rel="icon" type="image/png" href="[host_url]/assets/img/favicons/[lang]/favicon_16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="[host_url]/assets/img/favicons/[lang]/favicon_32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="[host_url]/assets/img/favicons/[lang]/favicon_48x48.png" sizes="48x48">
+  <link rel="icon" type="image/png" href="[host_url]/assets/img/favicons/[lang]/favicon_96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="[host_url]/assets/img/favicons/[lang]/favicon_128x128.png" sizes="128x128">
+  <link rel="icon" type="image/png" href="[host_url]/assets/img/favicons/[lang]/favicon_195x195.png" sizes="195x195">
+  <link rel="icon" type="image/png" href="[host_url]/assets/img/favicons/[lang]/favicon_196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="[host_url]/assets/img/favicons/[lang]/favicon_228x228.png" sizes="228x228">
+
+  <link rel="apple-touch-icon" href="[host_url]/assets/img/favicons/[lang]/favicon_120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="[host_url]/assets/img/favicons/[lang]/favicon_apple_76x76.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="[host_url]/assets/img/favicons/[lang]/favicon_apple_120x120.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="[host_url]/assets/img/favicons/[lang]/favicon_apple_152x152.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="[host_url]/assets/img/favicons/[lang]/favicon_apple_167x167.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="[host_url]/assets/img/favicons/[lang]/favicon_apple_180x180.png">
+
+  <link rel="manifest" href="[host_url]/assets/img/favicons/[lang]/manifest.json">
+  <meta name="msapplication-config" content="[host_url]/assets/img/favicons/[lang]/browserconfig.xml">
+
+
+  <meta name="Description" content="[description]">
+  <meta name="theme-color" content="#1B3F68">
+
+  <title>[title]</title>
+  <base href="/tea_3/">
+  <link rel="icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://matomo.stat.gov.lv">
+
+
+</head>
+<body>
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//matomo.stat.gov.lv/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '[stats_id]']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<app-root></app-root>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<div class="pop-layers">
+  <div [ngClass]="visible==true?'visible':'hidden'">
+    <div class="pop-container">
+      <div [ngClass]="mobile==true?'close-mobile':'close-desktop'" (click)="onCloseClick()"></div>
+      <ui-control-radio [lang]="lang" [id]="radio_id" [values]="radio_values" (updateOnChange)="onRadioChange($event)" [vertical]="true"></ui-control-radio>
+    </div>
+  </div>
+</div>
+
+
+

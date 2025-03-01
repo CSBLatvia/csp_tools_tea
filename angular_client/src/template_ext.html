@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" charset="utf-8">
+  <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+  <meta property="js:version" content>
+
+  <!-- facebook -->
+  <meta property="og:url" content="[full_path]">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="[title]">
+  <meta property="og:description" content="[description]">
+  <meta property="og:image" content="assets/img/meta/facebook_600x314_[lang].png">
+  <meta property="og:image:width" content="600">
+  <meta property="og:image:height" content="314">
+
+  <!-- twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="[full_path]">
+  <meta name="twitter:creator" content="[owner_name]">
+  <meta name="twitter:title" content="[title]">
+  <meta name="twitter:description" content="[description]">
+  <meta name="twitter:image" content="assets/img/meta/twitter_860x430_[lang].png">
+
+  <!-- draugiem.lv -->
+  <meta name="dr:say:img" content="assets/img/meta/draugiem_450x450_[lang].png">
+  <meta name="dr:say:title" content="[title]">
+
+  <meta name="Description" content="[description]">
+  <meta name="theme-color" content="#1B3F68">
+
+  <title>[title]</title>
+  <base href="/tea_3/external/">
+  <link rel="icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//matomo.stat.gov.lv/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '[stats_id]']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<ext-root></ext-root>
+</body>
+</html>

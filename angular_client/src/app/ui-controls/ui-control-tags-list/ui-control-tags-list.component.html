@@ -1,0 +1,21 @@
+<div class="ui-control">
+  <p *ngIf="label" class="ui-label">{{label?.name}}</p>
+  <div [ngClass]="disabled==false?'ui-tags-container':'ui-tags-container-disabled'">
+    <ng-container *ngFor="let item of values; index as i">
+      <div  [ngClass]="item.active==true?'ui-tags-button-active':'ui-tags-button'" [ngStyle]="{'background-color':item.active==true?colorsSelected[i]:colors[i]}">
+        <div (click)="onClick(item)" class="ui-tags-button-area">
+          <p  [ngClass]="item.active==true?'ui-tags-label-active':'ui-tags-label'">{{item.name?.name}}</p>
+        </div>
+        <div class="ui-tags-button-ico">
+          <span (click)="onClickDelete(item)" class="ui-tags-remove-ico">
+          <svg _ngcontent-cwu-c59="" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36" xml:space="preserve"><path _ngcontent-cwu-c59="" fill="#FFFFFF" d="M19.41,18l8.29-8.29c0.358-0.419,0.31-1.051-0.109-1.41c-0.374-0.32-0.927-0.32-1.301,0L18,16.59l-8.29-8.3
+          c-0.392-0.392-1.028-0.392-1.42,0s-0.392,1.028,0,1.42l8.3,8.29l-8.3,8.29c-0.419,0.359-0.468,0.99-0.109,1.41
+          c0.359,0.419,0.991,0.468,1.41,0.108C9.63,27.775,9.667,27.739,9.7,27.7l8.3-8.29l8.29,8.29c0.419,0.358,1.051,0.31,1.41-0.109
+          c0.32-0.374,0.32-0.927,0-1.301L19.41,18z"></path></svg>
+          </span>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
+

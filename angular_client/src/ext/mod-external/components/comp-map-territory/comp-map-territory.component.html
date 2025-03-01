@@ -1,0 +1,12 @@
+<div class="comp" #comp id="comp-{{domID}}">
+  <map-territory
+    [model]="model"
+    [route]="route"
+    [initialized]="initialized"
+    [visible]="visible"
+    [fullscreen]="fullscreen"
+    (onFullscreenChange)="onFullscreenChange($event)"
+  ></map-territory>
+  <share-button  [URL]="URL"></share-button>
+</div>
+

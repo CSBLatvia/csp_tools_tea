@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" charset="utf-8">
+  <title>example_percentage_list</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    window.addEventListener("message", (event) => {
+
+      const func = event.data.func;
+      const id = event.data.id;
+      const fullscreen = event.data.fullscreen;
+      let ww = -1;
+      let hh = -1;
+
+      console.log('***************');
+      console.log('PARENT-WIN - MESSAGE');
+      console.log('***************');
+      console.log('func: '+func);
+      console.log('id: '+id);
+      console.log('***************');
+
+      let elem = document.getElementById(id);
+      console.dir(elem);
+      console.log('***************');
+
+
+      switch (func){
+        case 'iframe-fullscreen':
+
+          if(fullscreen==true){
+            elem.classList.add('iframe-full');
+          }else{
+            elem.classList.remove('iframe-full');
+          }
+          break;
+
+        case 'resize':
+          ww = event.data.width;
+          hh = event.data.height;
+          break;
+      }
+
+
+
+    }  );
+  </script>
+</head>
+<body>
+
+<iframe
+  class="iframe"
+  id="676a69cb-8cb7-4d27-a376-a048c4a53e74"
+  src="https://tools.csb.gov.lv/tea_3/external/lv/ext-percentage-list/2022/workplace/number-of-workplaces/territories-3/LV0049000/industry/none?dom=676a69cb-8cb7-4d27-a376-a048c4a53e74"
+></iframe>
+</body>
+</html>

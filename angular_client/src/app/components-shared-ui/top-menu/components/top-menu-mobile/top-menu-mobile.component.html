@@ -1,0 +1,20 @@
+<div #settingsContainer></div>
+<nav class="menu-container" [title]="title?.name">
+  <div class="group-left">
+    <div class="btn-ico-hamburger" (click)="openSettingsClick()" ariaEnabled [role]="'button'" [ariaLabelID]="'aria-btn-menu'">
+      <clr-icon shape="bars" class="ico" role="img" aria-hidden="true"></clr-icon>
+    </div>
+    <div class="label-h6 btn-menu-off" (click)="changeViewClick('landing')" ariaEnabled [role]="'button'" [ariaLabelID]="'aria-btn-home'">{{title?.name}}</div>
+    <!--
+    <div (click)="changeViewClick('about')" [ngClass]="route.view=='about'?'btn-menu-active':'btn-menu'" ariaEnabled [role]="'button'" [ariaLabelID]="'aria-btn-about'">
+      <clr-icon shape="info-circle" size="24"> </clr-icon>
+    </div>
+    -->
+  </div>
+  <div class="group-right">
+    <div class="label-h6" [ngClass]="route.lang=='lv'?'btn-menu-active':'btn-menu'" (click)="changeLanguageClick('lv')" ariaEnabled [role]="'button'" [ariaLabelID]="'aria-btn-lang-lv'">{{buttonLV?.name}}</div>
+    <div class="label-h6" [ngClass]="route.lang=='en'?'btn-menu-active':'btn-menu'" (click)="changeLanguageClick('en')" ariaEnabled [role]="'button'" [ariaLabelID]="'aria-btn-lang-en'">{{buttonEN?.name}}</div>
+  </div>
+</nav>
+
+

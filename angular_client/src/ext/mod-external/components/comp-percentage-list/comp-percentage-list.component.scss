@@ -1,0 +1,89 @@
+@import "../../../../css/ext-components";
+
+.comp{
+  width: 100%;
+  height: auto;
+  background-color: #ffffff !important;
+  background-image: none !important;
+  min-height: 40px;
+}
+.chart{
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+
+.csb-nav{
+  height: auto;
+}
+.csb-nav>*{
+  @include cursorTouch();
+}
+
+.csb-nav-item{
+  display: inline-block !important;
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--clr-nav-link-color, #8c8c8c) !important;
+  font-size: 0.7rem;
+  font-weight: var(--clr-nav-link-font-weight, 400);
+  letter-spacing: normal;
+  line-height: 1.8rem;
+  display: inline-block;
+  padding: 0 0.15rem;
+  box-shadow: none;
+}
+
+
+.csb-nav-item-active{
+  @extend .csb-nav-item;
+  color: var(--clr-nav-link-active-color, black) !important;
+  box-shadow: 0 -0.15rem 0 var(--clr-nav-active-box-shadow-color, #0072a3) inset !important;
+  transition: box-shadow 0.2s ease-in !important;
+}
+
+
+.content-area{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  padding: 0;
+ // @include defaultGrayBorder();
+}
+
+
+
+table{
+  border-style: none !important;
+  margin: 0 !important;
+  padding: 0.5rem !important;
+}
+
+tr:nth-child(even) {
+  background-color: #f6f6f6;
+}
+
+td{
+  padding: 0.28rem !important;
+}
+.bar{
+  //min-width: 60px;
+}
+
+
+
+.item-percentage-bar{
+  text-align: center;
+  /////////////
+  background-color: $app-col-gray-2;
+  height: 0.8rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  min-width: 50px;
+}
+
+.item-percentage-bar-active{
+  background-color: $app-col-primary;
+  height: 0.8rem;
+}

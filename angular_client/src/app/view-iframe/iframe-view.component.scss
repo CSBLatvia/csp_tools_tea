@@ -1,0 +1,74 @@
+@import "../../css/app-main-vars";
+@import "../../css/app-modifiers";
+@import "../../css/app-classes";
+@import "../../css/app-colors";
+
+/*.csb-content-max{
+  padding-bottom: 6rem;
+}
+.csb-content-mob{
+  padding-bottom: 6rem;
+}*/
+.csb-about-title{
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: $app-col-primary;
+  margin: 0;
+  margin-top: 0rem;
+  padding: 0.5rem;
+  /////////////////////
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.csb-about-text{
+  margin: 0;
+  margin-top: 0rem;
+  padding: 0.5rem;
+  padding-top: 0;
+
+  .csb-about-mod-table{
+    margin-top: 0.5rem;
+    border-collapse: collapse;
+  }
+
+}
+.csb-about-button{
+  margin: 0.5rem;
+}
+
+.header-1,.header-2,.header-3,.header-4,.header-5{
+  color: $app-col-primary !important;
+  font-weight: 700 !important;
+  line-height: 1.8rem !important;
+}
+p{
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  br {
+    display: block !important; /* makes it have a width */
+    content: "" !important;; /* clears default height */
+    margin-top: 0 !important;; /* change this to whatever height you want it */
+  }
+}
+
+pre{
+  background: $app-col-gray;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  overflow: hidden;
+}
+code {
+  white-space: break-spaces;
+  color: #000000;
+}
+mark{
+  color: #ffffff;
+  background-color: $app-col-gray-6;
+  padding: 0.125rem;
+  border-radius: 0.125rem;
+}
+.block{
+  margin: 1rem;
+}
+

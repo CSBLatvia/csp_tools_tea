@@ -1,0 +1,9 @@
+<div class="ui-control-container">
+  <div [ngClass]="vertical==true?'ui-control-block-vertical':'ui-control-block-horizontal'">
+    <ng-container *ngIf="values && values.length>0">
+      <ng-container *ngFor="let item of values; index as i">
+        <app-item-radio [lang]="lang" [value]="item" (click)="onClick(item.id)"></app-item-radio>
+      </ng-container>
+    </ng-container>
+  </div>
+</div>

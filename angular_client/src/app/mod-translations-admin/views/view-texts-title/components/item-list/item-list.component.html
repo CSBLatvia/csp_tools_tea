@@ -1,0 +1,121 @@
+<div [ngClass]="index%2==0?'item':'item-2'" id="item-{{index}}">
+  <div class="clr-row">
+    <div class="clr-col">
+      <h4 class="id-h4-dark">{{vo.r_id}}</h4>
+    </div>
+  </div>
+  <div class="clr-row">
+    <div class="clr-col">
+      <span>home_work</span>
+      <span  [ngClass]="vo.home_work==''?'edit-field-empty':'edit-field'" [contentEditable]="false" spellcheck="false">{{vo.home_work}}</span></div>
+
+    <div class="clr-col">
+      <span>indicator_type</span>
+      <span  [ngClass]="vo.indicator_type==''?'edit-field-empty':'edit-field'" [contentEditable]="false" spellcheck="false">{{vo.indicator_type}}</span></div>
+
+    <div class="clr-col">
+      <span>selected_territ</span>
+      <span  [ngClass]="vo.selected_territ==''?'edit-field-empty':'edit-field'" [contentEditable]="false" spellcheck="false">{{vo.selected_territ}}</span></div>
+
+    <div class="clr-col">
+      <span>indicator_selected</span>
+      <span  [ngClass]="vo.indicator_selected==''?'edit-field-empty':'edit-field'" [contentEditable]="false" spellcheck="false">{{vo.indicator_selected}}</span></div>
+
+    <div class="clr-col">
+      <span>breakdown_selected</span>
+      <span  [ngClass]="vo.breakdown_selected==''?'edit-field-empty':'edit-field'" [contentEditable]="false" spellcheck="false">{{vo.breakdown_selected}}</span></div>
+
+    <div class="clr-col">
+      <span>meta_title_main_lv</span>
+      <span  [ngClass]="vo.meta_title_main_lv==''?'edit-field-empty':'edit-field'" [contentEditable]="false" spellcheck="false">{{vo.meta_title_main_lv}}</span></div>
+
+    <div class="clr-col">
+      <span>meta_title_main_en</span>
+      <span  [ngClass]="vo.meta_title_main_en==''?'edit-field-empty':'edit-field'" [contentEditable]="false" spellcheck="false">{{vo.meta_title_main_en}}</span></div>
+
+    <div class="clr-col">
+      <span>map_title_lv</span>
+      <span  [ngClass]="vo.map_title_lv==''?'edit-field-empty':'edit-field'" [contentEditable]="false" spellcheck="false">{{vo.map_title_lv}}</span></div>
+
+    <div class="clr-col">
+      <span>map_title_en</span>
+      <span  [ngClass]="vo.map_title_en==''?'edit-field-empty':'edit-field'" [contentEditable]="false" spellcheck="false">{{vo.map_title_en}}</span></div>
+
+    <div class="clr-col">
+      <span>table_title_lv</span>
+      <span  [ngClass]="vo.table_title_lv==''?'edit-field-empty':'edit-field'" [contentEditable]="false" spellcheck="false">{{vo.table_title_lv}}</span></div>
+
+    <div class="clr-col">
+      <span>table_title_en</span>
+      <span  [ngClass]="vo.table_title_en==''?'edit-field-empty':'edit-field'" [contentEditable]="false" spellcheck="false">{{vo.table_title_en}}</span></div>
+
+    <div class="clr-col">
+      <span>legend_clusters_title_lv</span>
+      <span  [ngClass]="vo.legend_clusters_title_lv==''?'edit-field-empty':'edit-field'" [contentEditable]="false" spellcheck="false">{{vo.legend_clusters_title_lv}}</span></div>
+
+    <div class="clr-col">
+      <span>legend_clusters_title_en</span>
+      <span  [ngClass]="vo.legend_clusters_title_en==''?'edit-field-empty':'edit-field'" [contentEditable]="false" spellcheck="false">{{vo.legend_clusters_title_en}}</span></div>
+
+    <div class="clr-col">
+      <span>legend_sizes_title_lv</span>
+      <span  [ngClass]="vo.legend_sizes_title_lv==''?'edit-field-empty':'edit-field'" [contentEditable]="false" spellcheck="false">{{vo.legend_sizes_title_lv}}</span></div>
+
+    <div class="clr-col">
+      <span>legend_sizes_title_en</span>
+      <span  [ngClass]="vo.legend_sizes_title_en==''?'edit-field-empty':'edit-field'" [contentEditable]="false" spellcheck="false">{{vo.legend_sizes_title_en}}</span></div>
+
+    <div class="clr-col">
+      <span>legend_circles_title_lv</span>
+      <span  [ngClass]="vo.legend_circles_title_lv==''?'edit-field-empty':'edit-field'" [contentEditable]="false" spellcheck="false">{{vo.legend_circles_title_lv}}</span></div>
+
+    <div class="clr-col">
+      <span>legend_circles_title_en</span>
+      <span  [ngClass]="vo.legend_circles_title_en==''?'edit-field-empty':'edit-field'" [contentEditable]="false" spellcheck="false">{{vo.legend_circles_title_en}}</span></div>
+
+    <div class="clr-col">
+      <span>table_col_1_title_lv</span>
+      <span  [ngClass]="vo.table_col_1_title_lv==''?'edit-field-empty':'edit-field'" [contentEditable]="false" spellcheck="false">{{vo.table_col_1_title_lv}}</span></div>
+
+    <div class="clr-col">
+      <span>table_col_1_title_en</span>
+      <span  [ngClass]="vo.table_col_1_title_en==''?'edit-field-empty':'edit-field'" [contentEditable]="false" spellcheck="false">{{vo.table_col_1_title_en}}</span></div>
+
+    <div class="clr-col">
+      <span> table_col_2_title_lv</span>
+      <span  [ngClass]="vo.table_col_2_title_lv==''?'edit-field-empty':'edit-field'" [contentEditable]="false" spellcheck="false">{{vo.table_col_2_title_lv}}</span></div>
+
+    <div class="clr-col">
+      <span>table_col_2_title_en</span>
+      <span  [ngClass]="vo.table_col_2_title_en==''?'edit-field-empty':'edit-field'" [contentEditable]="false" spellcheck="false">{{vo.table_col_2_title_en}}</span></div>
+
+    <div class="clr-col">
+      <span>table_col_3_title_lv</span>
+      <span  [ngClass]="vo.table_col_3_title_lv==''?'edit-field-empty':'edit-field'" [contentEditable]="false" spellcheck="false">{{vo.table_col_3_title_lv}}</span></div>
+
+    <div class="clr-col">
+      <span>table_col_3_title_en</span>
+      <span  [ngClass]="vo.table_col_3_title_en==''?'edit-field-empty':'edit-field'" [contentEditable]="false" spellcheck="false">{{vo.table_col_3_title_en}}</span></div>
+
+    <div class="clr-col">
+      <span>legend_list_title_lv</span>
+      <span  [ngClass]="vo.legend_list_title_lv==''?'edit-field-empty':'edit-field'" [contentEditable]="false" spellcheck="false">{{vo.legend_list_title_lv}}</span></div>
+
+    <div class="clr-col">
+      <span>legend_list_title_en</span>
+      <span  [ngClass]="vo.legend_list_title_en==''?'edit-field-empty':'edit-field'" [contentEditable]="false" spellcheck="false">{{vo.legend_list_title_en}}</span></div>
+
+    <div class="clr-col">
+      <span>meta_description_main_lv</span>
+      <span  [ngClass]="vo.meta_description_main_lv==''?'edit-field-empty':'edit-field'" [contentEditable]="false" spellcheck="false">{{vo.meta_description_main_lv}}</span></div>
+
+    <div class="clr-col">
+      <span>meta_description_main_en</span>
+      <span  [ngClass]="vo.meta_description_main_en==''?'edit-field-empty':'edit-field'" [contentEditable]="false" spellcheck="false">{{vo.meta_description_main_en}}</span></div>
+  </div>
+  <div class="clr-row">
+    <div class="clr-col">
+          <button class="btn btn-primary btn-sticky-left" (click)="onModifyClick(vo)">{{editVO?.name}}</button>
+    </div>
+  </div>
+</div>

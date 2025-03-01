@@ -1,0 +1,78 @@
+@import "../../../../css/app-main-vars";
+@import "../../../../css/app-colors";
+
+.error-button-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 6200;
+  pointer-events: auto;
+  touch-action: auto;
+}
+
+.modal-dialog{
+  @extend .modal-dialog;
+}
+
+.modal-backdrop{
+  @extend .modal-backdrop;
+}
+
+h1{
+  padding: 0.5rem !important;
+  background-color: $app-col-gray-2;
+  text-align: center;
+}
+h4{
+  padding: 0.5rem !important;
+}
+.modal-header{
+  padding: 0 !important;
+}
+.modal-content{
+  padding: 0.5rem !important;
+}
+.modal-title{
+  border: none !important;
+  outline: none !important;
+}
+
+.modal-body{
+  border-style: solid;
+  border-color: $app-col-gray-2;
+  border-radius: $app-border-radius-default;
+  border-width: 1px;
+  padding: 0.25rem;
+  line-height: 1rem;
+  user-select: text;
+}
+
+.error-ico{
+  fill: $app-col-gray-8;
+  margin-right: 0.25rem;
+}
+
+.error{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $app-col-gray;
+  border-radius: $app-border-radius-default;
+  padding: 0.25rem;
+  border-color: $app-col-gray-2;
+  border-style: solid;
+  border-width: 1px;
+  @include cursorTouch();
+}
+.error:hover{
+  background-color: #ffffff;
+  span{
+    text-decoration: underline;
+  }
+  .error-ico{
+    fill: $app-col-gray-10;
+  }
+}

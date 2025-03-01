@@ -1,0 +1,4 @@
+  <div #header id="header">
+    <app-top-menu-desktop *ngIf="mobile==false && initialized==true"></app-top-menu-desktop>
+    <app-top-menu-mobile  *ngIf="mobile==true && initialized==true"></app-top-menu-mobile>
+  </div>

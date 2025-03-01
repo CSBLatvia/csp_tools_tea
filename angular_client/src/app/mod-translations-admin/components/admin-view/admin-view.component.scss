@@ -1,0 +1,42 @@
+@import "../../../../css/app-colors";
+@import "../../../../css/app-main-vars";
+$col-bg: #2a2a2a;
+
+
+body{
+  background-color: $col-bg;
+}
+.table-area{
+  width: 100%;
+  top: 80px;
+  height: calc(100vh  - 80px);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: $col-bg;
+  padding: 1rem;
+  padding-bottom: 80px;
+  position: absolute;
+}
+
+.edit-field{
+  border-color: $app-col-gray-8;
+  border-width: $app-border-width;
+  border-style: solid;
+  border-radius: $app-border-radius-default;
+
+  min-height: 1rem;
+
+  display: block;
+  padding: 1rem;
+
+
+  color: #000000;
+  background-color: #ffffff;
+  border-color: $app-col-primary;
+}
+.edit-field:hover{
+  border-color: $app-col-primary;
+}
+.edit-field:hover::selection{
+  border-color: $app-col-primary;
+}

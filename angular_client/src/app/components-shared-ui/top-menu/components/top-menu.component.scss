@@ -1,0 +1,185 @@
+@import "../../../../css/app-main-vars";
+@import "../../../../css/app-colors";
+
+
+.menu-container{
+  width: 100%;
+
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+
+  padding: 0;
+  max-width: $app-max-width-top-menu-content;
+  //////////////////////////
+  min-height: $app-top-menu-height;
+  height: $app-top-menu-height;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $app-col-top-menu;
+  @include debugBorder();
+}
+.menu-container-full{
+  width: 100%;
+
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+
+  padding: 0;
+  //max-width: $app-max-width-top-menu-content;
+  //////////////////////////
+  min-height: $app-top-menu-height;
+  height: $app-top-menu-height;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $app-col-top-menu;
+  @include debugBorder();
+}
+.group-flex{
+  margin: 0;
+  padding: 0;
+  // display: block;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: $app-top-menu-height;
+}
+.group-left{
+  @extend .group-flex;
+  justify-content: flex-start;
+}
+.group-right{
+  @extend .group-flex;
+  justify-content: flex-end;
+}
+
+////////////////////////////////
+// btn-menu
+////////////////////////////////
+.btn-menu{
+  user-select: none;
+  @include cursorTouch();
+  text-align: center;
+  display: inline-block;
+  padding: 0;
+  padding-left: $app-padding-default*2;
+  padding-right: $app-padding-default*2;
+  color: #ffffff;
+  background-color: rgba(255,255,255,0);
+  margin: 0;
+  line-height: $app-top-menu-height;
+  //////////// wrapp
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.btn-menu-off{
+  user-select: none;
+  @include cursorTouch();
+  text-align: center;
+  display: inline-block;
+  padding: 0;
+  padding-left: $app-padding-default*2;
+  padding-right: $app-padding-default*2;
+  color: #ffffff;
+  background-color: rgba(255,255,255,0);
+  margin: 0;
+  line-height: $app-top-menu-height;
+
+  //////////// wrapp
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.btn-menu:hover{
+  touch-action: none;
+  @include cursorTouch();
+  color: #ffffff;
+  background-color: rgba(255,255,255,0.1);
+}
+.btn-menu-active{
+  user-select: none;
+  @include cursorNone();
+  text-align: center;
+  display: inline-block;
+  padding: 0;
+  padding-left: $app-padding-default*2;
+  padding-right: $app-padding-default*2;
+  margin: 0;
+  line-height: $app-top-menu-height;
+
+  color: rgba(255,255,255,1);
+  background-color: rgba(0, 0, 0, 0.15);
+
+  //////////// wrapp
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+////////////////////////////////
+// btn-ico
+////////////////////////////////
+.btn-ico{
+  @include cursorTouch();
+  width: $app-top-menu-height;
+  height: $app-top-menu-height;
+  background-color: rgba(255, 255, 255, 0);
+  left: 0;
+  top: 0;
+  .ico{
+    fill: #ffffff;
+    width: 20px;
+    height: 20px;
+    margin: calc((#{$app-top-menu-height} - 20px)/2);
+    opacity: 100%;
+  }
+}
+.btn-ico:hover{
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.btn-ico-active{
+  user-select: none;
+  width: $app-top-menu-height;
+  height: $app-top-menu-height;
+  left: 0;
+  top: 0;
+  .ico{
+    fill: #ffffff !important;
+    width: 20px;
+    height: 20px;
+    margin: calc((#{$app-top-menu-height} - 20px)/2);
+    opacity: 100%;
+  }
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+////////////////////////////////
+// btn-ico-hamburger
+////////////////////////////////
+.btn-ico-hamburger{
+  @extend .btn-ico;
+  .ico{
+    fill: #ffffff !important;
+    width: 36px;
+    height: 36px;
+    margin: calc((#{$app-top-menu-height} - 36px)/2);
+    opacity: 100%;
+  }
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.btn-ico-hamburger:hover{
+  background-color: rgba(0, 0, 0, 0.30);
+}
+
+

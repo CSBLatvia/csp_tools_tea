@@ -1,0 +1,40 @@
+<div class="comp" #comp>
+  <div id="chart" class="chart" *ngIf="service.content.length>0">
+      <h4 class="title">{{service.title}}</h4>
+      <div class="section">
+        <ul class="nav csb-nav">
+          <li class="nav-item"  *ngFor="let vo of service.content,let i=index;">
+            <p [ngClass]="i==service.id?'csb-nav-item-active':'csb-nav-item'" (click)="onTabClick(i)">{{vo.tab.name}}</p>
+          </li>
+        </ul>
+      </div>
+      <div class="content-area">
+        <table class="table table-compact">
+        <thead>
+        <tr>
+          <th class="left"></th>
+          <th class="right">{{service.content[0].columns[1]}}</th>
+          <th class="right"></th>
+          <th class="right">{{service.content[0].columns[2]}}</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let vo of service.content[service.id].data,let i=index;">
+          <td class="left">{{vo.name}}</td>
+          <td class="right">{{vo.value}}</td>
+          <td class="right bar">
+            <div class="item-percentage-bar">
+              <div class="item-percentage-bar-active" [style.width]="vo.percentage+'%'"></div>
+            </div>
+          </td>
+          <td class="right">{{vo.percentage}}</td>
+        </tr>
+        </tbody>
+      </table>
+      </div>
+  </div>
+  <share-button  [URL]="URL"></share-button>
+  <service-error *ngIf="error!==null" [data]="error"></service-error>
+  <service-empty *ngIf="empty!==null" [data]="empty"></service-empty>
+</div>
+

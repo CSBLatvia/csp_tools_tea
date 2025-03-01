@@ -1,0 +1,87 @@
+@import "../../../../../../../../css/app-main-vars";
+@import "../../../../../../../../css/app-modifiers";
+@import "../../../../../../../../css/app-colors";
+
+$ico-height:36px;
+$gap: $app-gap-4;
+$legendMaxWidth: 400px;
+
+///////////////////////////////
+// legend
+//////////////////////////////
+
+.map-legend-horizontal{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: left;
+}
+.map-legend-vertical{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: left;
+}
+.map-legend-container{
+  width: 100%;
+  padding: 0;
+  min-height: 111px;
+}
+.map-legend-item{
+  height: auto;
+  min-height: 111px;
+}
+
+.legendColors{
+  display: table;
+  background-color: #ffffff;
+}
+
+.legendItem{
+  display: flex;
+  margin-bottom: 0.15rem;
+}
+.legendItem:last-child {
+  display: flex;
+  margin-bottom: 0;
+}
+.colorDiv{
+  display: block;
+  background-color: #ffffff;
+  width: 0.8rem;
+  height: 0.8rem;
+
+  border-color: $app-col-gray-4;
+  border-style: solid;
+  border-width: 0.05rem;
+}
+
+.bordersDiv{
+  display: block;
+  background-color: #ffffff;
+  width: auto;
+  height: 2rem;
+}
+
+.legendValues{
+  display: flex;
+  width: 100%;
+  background-color: #ffffff;
+  p{
+    color: #000000;
+  }
+}
+.item-txt{
+  color: #000000;
+  padding: 0 !important;
+  margin: 0 !important;
+  padding-left: 0.2rem !important;
+  text-align: left;
+  vertical-align: middle;
+  background-color: #ffffff;
+  line-height: 0.8rem !important;
+}
+.title-block{
+  padding: 0; margin: 0;
+  padding-bottom: 0.5rem;
+}

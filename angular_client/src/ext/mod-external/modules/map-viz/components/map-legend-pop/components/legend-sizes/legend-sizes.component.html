@@ -1,0 +1,24 @@
+<div class="title-block" *ngIf="initialized==true">
+  <p class="p6 mod--no-gap">{{titlesVO?.legend_sizes_title}}</p>
+</div>
+
+<ng-container *ngIf="initialized==true && dataIsNotComplete==false">
+  <div class="list-item">
+    <div class="size-area">
+      <div class="size-square" [ngStyle]="{'margin-left': minRadius-4+'px'}"></div>
+    </div>
+    <p class="p8 item-txt mod--no-gap">{{areaTitle}}</p>
+  </div>
+  <div class="list-item" [ngClass]="valueTooSmallStartsFrom==-1?'hidden':''">
+    <div class="size-area">
+      <div class="size-circle" [ngStyle]="{'width': minRadius*2+'px','height': minRadius*2+'px'}" ></div>
+    </div>
+    <p class="p8 item-txt mod--no-gap">{{minTitle}}</p>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="dataIsNotComplete==true">
+  <p class="p8 item-txt mod--no-gap">{{noDataTitle?.name}}</p>
+</ng-container>
+
+

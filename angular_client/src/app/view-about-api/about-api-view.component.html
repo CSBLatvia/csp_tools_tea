@@ -1,0 +1,33 @@
+<div class="csb-app" id="csbApp" #view>
+  <div class="csb-top-menu">
+    <app-top-menu></app-top-menu>
+  </div>
+  <div class="csb-container" *ngIf="initialized==true">
+    <main [ngClass]="mobile==true?'csb-content-mob':'csb-content-max'">
+      <div class="clr-row">
+        <div class="clr-col-sm-12">
+             <app-big-title [title_id]="'api-title'" [verticalGap]="true"></app-big-title>
+             <div class="csb-about-text">
+             <p>{{description?.name}}</p>
+                <ng-container *ngIf="items.length>0">
+                <div *ngFor="let item of items">
+                  <h2 class="csb-label-h4" ariaEnabled [ariaLabel]="item.name.name">{{item.name.name}}</h2>
+                  <a class="footer-link" [href]="item.link.name" target="_blank">{{item.link.name}}</a><br>
+                  <span>{{item.descr.name}}</span>
+                  <table class="table table-vertical csb-about-mod-table">
+                    <tr *ngFor="let vo of item?.data">
+                      <td>{{vo.field}}</td>
+                      <td>{{vo.info}}</td>
+                    </tr>
+                  </table>
+                </div>
+            </ng-container>
+            </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <app-footer [containerID]="'csbApp'"></app-footer>
+  <app-scroll-top [containerID]="'csbApp'"></app-scroll-top>
+</div>
+

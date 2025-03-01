@@ -1,0 +1,50 @@
+<div class="ui-control" #dropdown>
+  <p *ngIf="label" class="ui-label">{{label?.name}}</p>
+  <div class="ui-dropdown-container" #containerRef>
+    <div [ngClass]="empty==true?'ui-dropdown-input-disabled':(open==true?'ui-dropdown-input ui-z-first':'ui-dropdown-input')">
+      <div class="ui-dropdown-loader" *ngIf="loading==true&&disabled==false">
+        <div class="ui-dropdown-loader-container">
+          <span class="spinner spinner-inverse spinner-sm"></span>
+        </div>
+      </div>
+
+
+      <p (click) = "onInputClick()" [ngClass]="(open==true && searchable==true)?'disabled':(loading==false?'ui-dropdown-input-text':'ui-dropdown-input-text-disabled')" #inputTitleRef>
+        {{defaultName!==null?defaultName?.name:value?.name.name}}
+      </p>
+      <input #inputSearchRef spellcheck="false" value=""
+            [ngClass]="open==true?(searchable==true?'ui-dropdown-input-search':'disabled'):('disabled')"
+            (keydown)="onKeyDownCheckArrows($event)"
+            (keyup)="onSearchChange($event)"
+            (click)="onSearchClick()"
+            (focusin)="onInputFocus(true)"
+            (focusout)="onInputFocus(false)"
+      />
+
+
+
+      <div (click)="onArrowClick()" [ngClass]="loading==false?'ui-dropdown-icons-block':'ui-dropdown-icons-block-disabled'">
+        <div [ngClass]="open==false?'ui-dropdown-arrow-ico-open':'ui-dropdown-arrow-ico-close'"></div>
+      </div>
+
+
+    </div>
+       <div [ngClass]="open==true?'ui-dropdown-list ui-z-second':'ui-dropdown-list-hidden'" [style.height]="itemSize*(itemsMinCount+1)+'px'" [style.max-height]="itemSize*(itemsMinCount+1)+'px'">
+          <div class="ui-dropdown-list-content"
+               [style.height]="itemSize*itemsMinCount+'px'"
+               [style.max-height]="itemSize*itemsMinCount+'px'"
+               [ngStyle]="{'height': itemSize*itemsMinCount+'px', 'max-height': itemSize*itemsMinCount+'px'}"
+          >
+            <ng-scrollbar #scroller>
+                <div *ngFor="let item of values; index as i">
+                  <div  [ngClass]="item.id==id?'ui-dropdown-item-selected':'ui-dropdown-item'" (click)="onListItemClick(i)" id="scroll-item-{{i}}" (mouseover)="onListMouseOver(i)" (mouseout)="onListMouseOut(i)">
+                    <p class="ui-dropdown-item-label">{{item.name?.name}}</p>
+                  </div>
+                </div>
+            </ng-scrollbar>
+          </div>
+       </div>
+
+
+  </div>
+</div>

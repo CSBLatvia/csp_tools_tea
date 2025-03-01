@@ -1,0 +1,80 @@
+  <div class="item-create" #itemModify>
+    <div class="clr-row">
+      <div class="clr-col">
+        <h4 class="id-h4">{{vo.p_id}}</h4>
+      </div>
+    </div>
+    <div class="clr-row">
+      <div class="clr-col">
+        <span>home_work</span>
+      </div>
+      <div class="clr-col">
+        <span>indicator_type</span>
+      </div>
+      <div class="clr-col">
+        <span>selected_territ</span>
+      </div>
+      <div class="clr-col">
+        <span>indicator_selected</span>
+      </div>
+      <div class="clr-col">
+        <span>breakdown_selected</span>
+      </div>
+      <div class="clr-col">
+        <span>request_type</span>
+      </div>
+      <div class="clr-col">
+        <span>text_display_lv</span>
+      </div>
+      <div class="clr-col">
+        <span>text_display_en</span>
+      </div>
+      <div class="clr-col">
+        <span>sql_string_from_join</span>
+      </div>
+      <div class="clr-col">
+        <span>sql_string_where</span>
+      </div>
+    </div>
+    <div class="clr-row">
+      <div class="clr-col">
+        <span class="edit-field" [contentEditable]="true" spellcheck="false" #home_work>{{vo.home_work}}</span>
+      </div>
+      <div class="clr-col">
+        <span class="edit-field" [contentEditable]="true" spellcheck="false" #indicator_type>{{vo.indicator_type }}</span>
+      </div>
+      <div class="clr-col">
+        <span class="edit-field" [contentEditable]="true" spellcheck="false" #selected_territ>{{vo.selected_territ }}</span>
+      </div>
+      <div class="clr-col">
+        <span class="edit-field" [contentEditable]="true" spellcheck="false" #indicator_selected>{{vo.indicator_selected }}</span>
+      </div>
+      <div class="clr-col">
+        <span class="edit-field" [contentEditable]="true" spellcheck="false" #breakdown_selected>{{vo.breakdown_selected }}</span>
+      </div>
+      <div class="clr-col">
+        <span class="edit-field" [contentEditable]="true" spellcheck="false" #request_type>{{vo.request_type }}</span>
+      </div>
+      <div class="clr-col">
+        <span class="edit-field" [contentEditable]="true" spellcheck="false" #text_display_lv>{{vo.text_display_lv }}</span>
+      </div>
+      <div class="clr-col">
+        <span class="edit-field" [contentEditable]="true" spellcheck="false" #text_display_en>{{vo.text_display_en }}</span>
+      </div>
+      <div class="clr-col">
+        <span class="edit-field" [contentEditable]="true" spellcheck="false" #sql_string_from_join>{{vo.sql_string_from_join }}</span>
+      </div>
+      <div class="clr-col">
+        <span class="edit-field" [contentEditable]="true" spellcheck="false" #sql_string_where>{{vo.sql_string_where }}</span>
+      </div>
+
+
+    </div>
+    <div class="clr-row">
+      <div class="clr-col">
+        <button class="btn btn-primary" (click)="onCancelClick()">{{cancelVO?.name}}</button>
+        <button class="btn btn-primary" (click)="onSaveClick()">{{saveVO?.name}}</button>
+      </div>
+    </div>
+  </div>
+

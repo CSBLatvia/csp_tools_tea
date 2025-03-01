@@ -1,0 +1,33 @@
+@import "../../../../../../../../css/app-main-vars";
+@import "../../../../../../../../css/app-modifiers";
+@import "../../../../../../../../css/app-colors";
+
+.title-block{
+  padding: 0; margin: 0;
+  padding-bottom: 0.5rem;
+}
+.list-item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+.circle-color{
+  width: 0.5rem;
+  height: 0.5rem;
+  margin: 0;padding: 0;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border-width: 2px;
+  border-color: #ffffff;
+  border-style: solid;
+}
+.item-txt{
+  padding: 0 !important;
+  margin: 0 !important;
+  display: inline;
+  width: 100%;
+  float: left;
+  vertical-align: top !important;
+  padding-left: 0.2rem !important;
+}

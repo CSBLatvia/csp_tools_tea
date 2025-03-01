@@ -1,0 +1,16 @@
+<div class="settings-view" #settingsComponent>
+  <div class="settings-area-hidden" (click)="close()" ariaEnabled></div>
+  <div class="settings-area">
+        <div class="top-menu">
+          <div class="settings-close-button" (click)="close()" ariaEnabled>
+            <clr-icon shape="window-close" class="ico"></clr-icon>
+          </div>
+          <p class="settings-title mod--no-gap">{{title?.name}}</p>
+        </div>
+        <div class="sidenav csb--sidenav">
+          <div [ngClass]="route?.view=='landing'?'csb-btn-active':'csb-btn'"  routerLink="/{{route.lang}}/landing" (click)="close()" ariaEnabled><h6 class="h6">{{buttonHome?.name}}</h6></div>
+          <div [ngClass]="route?.view=='about'?'csb-btn-active':'csb-btn'"  routerLink="/{{route.lang}}/about" (click)="close()" ariaEnabled><h6 class="h6">{{buttonAbout?.name}}</h6></div>
+          <div [ngClass]="route?.view=='iframe'?'csb-btn-active':'csb-btn'"  routerLink="/{{route.lang}}/iframe" (click)="close()" ariaEnabled><h6 class="h6">{{buttonIframe?.name}}</h6></div>
+        </div>
+  </div>
+</div>

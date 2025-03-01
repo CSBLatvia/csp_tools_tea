@@ -1,0 +1,13 @@
+<div class="ui-control">
+  <p *ngIf="label" class="ui-label">{{label?.name}}</p>
+  <div class="ui-toggle-container">
+    <ng-container *ngIf="values.length>0">
+      <div (click)="onClick(0)" [ngClass]="values[0].id==id?'ui-toggle-left-active':'ui-toggle-left'">
+        <p [ngClass]="values[0].id==id?'ui-toggle-label-active':'ui-toggle-label'">{{values[0].name?.name}}</p>
+      </div>
+      <div (click)="onClick(1)" [ngClass]="values[1].id==id?'ui-toggle-right-active':'ui-toggle-right'">
+        <p [ngClass]="values[1].id==id?'ui-toggle-label-active':'ui-toggle-label'">{{values[1].name?.name}}</p>
+      </div>
+    </ng-container>
+  </div>
+</div>

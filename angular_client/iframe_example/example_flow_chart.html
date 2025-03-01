@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" charset="utf-8">
+  
+  <title>example_flow_chart</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    window.addEventListener("message", (event) => {
+
+      const func = event.data.func;
+      const id = event.data.id;
+      const fullscreen = event.data.fullscreen;
+      let ww = -1;
+      let hh = -1;
+
+      console.log('***************');
+      console.log('PARENT-WIN - MESSAGE');
+      console.log('***************');
+      console.log('func: '+func);
+      console.log('id: '+id);
+      console.log('***************');
+
+      let elem = document.getElementById(id);
+
+      switch (func){
+        case 'iframe-fullscreen':
+
+          if(fullscreen==true){
+            elem.classList.add('iframe-full');
+          }else{
+            elem.classList.remove('iframe-full');
+          }
+          break;
+
+        case 'resize':
+          ww = event.data.width;
+          hh = event.data.height;
+          elem.style.height = hh+'px';
+          break;
+      }
+
+
+
+    }  );
+  </script>
+</head>
+<body>
+
+<iframe
+  class="iframe"
+  id="558f6656-d9c0-4d52-a664-82d127cd9e5a"
+  src="https://tools.csb.gov.lv/tea_3/external/lv/ext-flow-chart/2022/workplace/number-of-workplaces/territories-3/LV0049000/none/none?dom=558f6656-d9c0-4d52-a664-82d127cd9e5a"
+></iframe>
+</body>
+</html>

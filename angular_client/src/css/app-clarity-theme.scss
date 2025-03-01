@@ -1,0 +1,427 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap');
+@import "app-colors";
+@import "app-main-vars";
+
+$clr-fontSkipBase64: true;
+$clr-font: 'Roboto Condensed', sans-serif;
+$clr-altFont: 'Roboto Condensed', sans-serif;
+$clr-font-base-size: 16;
+
+$clr-font-weight-light:300;
+$clr-font-weight-regular:400;
+$clr-font-weight-bold:700;
+$clr-font-weight-extrabold:700;
+
+$clr-btn-font-weight: 400;
+
+
+/////////////////////////
+@import "../../node_modules/@clr/ui/src/utils/components.clarity";
+////////////////////////
+
+
+////////////////////
+/* TODO - clarity v3  - the way how to override theme properties has been changed */
+// https://clarity.design/documentation/themes#examples
+////////////////////
+
+:root {
+
+  --clr-btn-default-color: #{$app-col-button-dark};
+  --clr-btn-default-hover-color: #{$app-col-button-dark};
+  --clr-btn-default-outline-border-color: #{$app-col-button-dark};
+  --clr-btn-default-outline-hover-color: #{$app-col-button-dark};
+  --clr-btn-default-border-color: #{$app-col-button-dark};
+
+
+
+  // toggle
+  --clr-toggle-bg-color-on: #{$app-col-button};
+  --clr-outline-color: rgba(0,0,0,0);
+  --clr-btn-default-outline-color: rgba(0,0,0,0);
+  --clr-btn-success-outline-color: rgba(0,0,0,0);
+
+  /// primary button
+  --clr-btn-primary-bg-color: #{$app-col-button};
+  --clr-btn-primary-border-color: #{$app-col-button}; // border-color
+  --clr-btn-primary-hover-bg-color: #{$app-col-button-dark}; // hover-background-color
+
+  //btn-icon
+  --clr-btn-inverse-border-color: #{$app-col-button-dark};
+  --clr-btn-default-outline-color: #{$app-col-button-dark};
+  --clr-btn-default-outline-border-color: #{$app-col-button-dark};
+
+
+
+  //checkbox
+  --clr-forms-checkbox-background-color: #{$app-col-button};
+
+  //radio
+  --clr-forms-radio-selected-shadow: inset 0 0 0 0.25rem #{$app-col-button};
+
+  //spinner
+  --clr-spinner-color: #{$app-col-spinner} !important;
+  --clr-progress-defaultBarColor: #{$app-col-spinner} !important;
+
+  //tooltip
+  --clr-tooltip-background-color: #{$app-col-primary-dark-6};
+
+  //nav-link-active
+  --clr-nav-active-box-shadow-color: #{$app-col-orange};
+  --clr-nav-link-color: #{$app-col-gray-9};
+  --clr-nav-link-active-color: #{$clr-nav-link-active-color};
+
+  --clr-link-color:#{$app-col-primary-dark};
+  --clr-link-hover-color: #{$app-col-primary-dark};
+  --clr-link-visited-color:#{$app-col-primary-dark};
+  --clr-link-active-color: #{$app-col-primary-dark};
+
+  //p5
+  --clr-p5-font-weight: #{$clr-font-weight-regular};
+  --clr-p5-font-size: #{$clr-typography-xsmalltext};
+
+  //h5
+  --clr-h5-font-size: #{$clr-h5-font-size};
+  --clr-h5-font-weight: #{$clr-h5-font-weight};
+
+  //h4
+  --clr-h4-font-size: #{$clr-h4-font-size};
+  --clr-h4-font-weight: #{$clr-h4-font-weight};
+
+  //h3
+  --clr-h3-font-size: #{$clr-h3-font-size};
+  --clr-h3-font-weight: #{$clr-h3-font-weight};
+
+  //h2
+  --clr-h2-font-size: #{$clr-h2-font-size};
+  --clr-h2-font-weight: #{$clr-h2-font-weight};
+
+  //h1
+  --clr-h1-font-size: #{$clr-h1-font-size};
+  --clr-h1-font-weight: #{$clr-h1-font-weight};
+
+}
+// h1, h2, h3, h4, h5
+.label-h1{
+  font-size: var(--clr-h1-font-size) !important;
+  font-weight: 500 !important;
+}
+.label-h2{
+  font-size: var(--clr-h2-font-size) !important;
+  font-weight: 500 !important;
+}
+.label-h3{
+  font-size: var(--clr-h3-font-size) !important;
+  font-weight: 500 !important;
+}
+.label-h4{
+  font-size: var(--clr-h4-font-size) !important;
+  font-weight: 500 !important;
+}
+
+.label-h5{
+  font-size: var(--clr-h5-font-size) !important;
+  font-weight: var(--clr-h5-font-weight) !important;
+}
+// p5
+.label-p5{
+  font-size: var(--clr-p5-font-size) !important;
+  font-weight: var(--clr-p5-font-weight) !important;
+}
+.label-p6{
+  font-size: var(--clr-p6-font-size) !important;
+  font-weight: var(--clr-p6-font-weight) !important;
+}
+.label-p7{
+  font-size: var(--clr-p7-font-size) !important;
+  font-weight: var(--clr-p7-font-weight) !important;
+}
+
+/////////////////////////////////////////////
+// CSB-labels
+/////////////////////////////////////////////
+/*.csb-big-title{
+  font-weight: 700 !important;
+  color: $app-col-primary !important;
+}*/
+// h1, h2, h3, h4, h5
+.csb-label-h1{
+  font-size: var(--clr-h1-font-size) !important;
+  font-weight: 700 !important;
+  color: $app-col-primary !important;
+}
+.csb-label-h2{
+  font-size: var(--clr-h2-font-size) !important;
+  font-weight: 700 !important;
+  color: $app-col-primary !important;
+}
+.csb-label-h3{
+  font-size: var(--clr-h3-font-size) !important;
+  font-weight: 700 !important;
+  color: $app-col-primary !important;
+}
+.csb-label-h4{
+  font-size: var(--clr-h4-font-size) !important;
+  font-weight: 700 !important;
+  color: $app-col-primary !important;
+}
+
+.csb-label-h5{
+  font-size: var(--clr-h5-font-size) !important;
+  font-weight: 700 !important;
+  color: $app-col-primary !important;
+}
+// p5
+.csb-label-p5{
+  font-size: var(--clr-p5-font-size) !important;
+  font-weight: var(--clr-p5-font-weight) !important;
+  color: $app-col-primary !important;
+}
+.csb-label-p6{
+  font-size: var(--clr-p6-font-size) !important;
+  font-weight: var(--clr-p6-font-weight) !important;
+  color: $app-col-primary !important;
+}
+.csb-label-p7{
+  font-size: var(--clr-p7-font-size) !important;
+  font-weight: var(--clr-p7-font-weight) !important;
+  color: $app-col-primary !important;
+}
+
+//////////////////////////////////////
+// button, override
+//////////////////////////////////////
+button{
+  border:0;
+  border-style: none;
+  padding: 0;
+  margin: 0;
+}
+header{
+  height: auto;
+}
+
+*:focus-visible{
+  outline: 2px solid $app-col-primary-dark-6 !important;
+}
+*:focus:not(:focus-visible){
+  outline: none !important;
+  box-shadow: none!important;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,p,span,text {
+  font-family: "Roboto Condensed", sans-serif !important;
+  font-weight: 400;
+  letter-spacing: inherit;
+}
+h1,
+h2,
+h3,
+h4{
+  font-weight: 500 !important;
+  font-family: "Roboto Condensed", sans-serif !important;
+}
+
+body{
+  font-family: "Roboto Condensed", sans-serif !important;
+  height: 100vh;
+  min-height:100vh;
+  overflow: hidden;
+
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+.body-loaded{
+  background-color: $app-col-footer;
+}
+
+a:link { text-decoration: underline;}
+
+.nav{
+  height: auto !important;
+  flex-wrap: wrap !important;
+}
+.nav-item{
+  pointer-events: auto !important;
+  -ms-touch-action: auto !important;
+  touch-action: auto !important;
+  cursor: pointer !important;
+  p{
+    margin-top: 0 !important;
+  }
+}
+
+
+
+
+//////////////////////////////////////
+// clarity stackview override
+//////////////////////////////////////
+.stack-block-content{
+  @extend .stack-block-content;
+  flex: 0 0 0;
+  max-width: 0;
+  display: none;
+}
+.stack-block-label {
+  @extend .stack-block-label;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.stack-block-label:focus-visible{
+  outline: 2px solid $app-col-primary-dark-6 !important;
+}
+.stack-block-label:focus:not(:focus-visible){
+  outline: none !important;
+  box-shadow: none!important;
+}
+
+.stack-view .stack-block-label {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+label{
+  user-select: none;
+}
+.bread-crumb{
+  p{
+    user-select: none;
+  }
+}
+.stack-block-label {
+  &::before {
+    // disabling angle icon..
+    display: none !important;
+  }
+}
+//////////////////////////
+// URL
+//////////////////////////
+.url-item{
+  //color: $app-col-primary !important;
+  text-decoration: none !important;
+  display: block;
+
+  p,span{
+    text-decoration: none !important;
+  }
+}
+.url-item:focus-visible{
+  outline: 2px solid $app-col-primary-light-4 !important;
+}
+
+.url-item:focus:not(:focus-visible){
+  text-decoration: underline !important;
+  outline: none !important;
+  box-shadow: none!important;
+  p,span{
+    text-decoration: underline !important;
+  }
+}
+
+
+
+//////////////////////////
+// SECTION
+//////////////////////////
+.section{ }
+.section:focus-visible{
+  outline: 2px solid $app-col-primary-light-4 !important;
+}
+.section:focus:not(:focus-visible){
+  outline: none !important;
+  box-shadow: none!important;
+}
+
+
+//////////////////////////////////////////////
+.orientationInfo{
+  display:block;
+  position: fixed;
+  z-index: 99999999;
+  background-color: $app-col-primary-dark-2;
+  color: #ffffff;
+  height: 100vh;
+  width: 100vw;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  ////////////////////
+
+  @media only screen and (orientation:landscape) and (max-width: 500px) {
+    display:block;
+    touch-action: auto;
+    pointer-events: auto;
+  }
+
+  /* (B) CORRECT ORIENTATION - SHOW CONTENT HIDE MESSAGE */
+  @media only screen and (orientation:portrait) and (max-width: 500px){
+    display:none;
+    touch-action: none;
+    pointer-events: none;
+  }
+}
+
+
+.checkDevice{
+  display:none;
+  position: fixed;
+  z-index: 99999999;
+  height: 100vh;
+  width: 100vw;
+
+  background-image:
+
+    linear-gradient(163deg, rgba(2, 68, 142,0.4) 10%, rgba(99, 167, 247, 0.4) 90%),
+    url("~src/assets/svg/landing_pattern.svg"),
+    linear-gradient(163deg, rgba(2, 68, 142,1) 10%, rgba(99, 167, 247, 1) 90%);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+  .info{
+    font-size: 2rem;
+    line-height: 2.4rem;
+    color: #ffffff;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+  }
+
+
+
+  ////////// DESKTOP-landscape /////////////////
+  @media (min-width: 900px) and (orientation: landscape) {
+    display: none;
+    background-color: darkblue;
+  }
+  ////////// MOBILE - PORTRAIT /////////////////
+  @media (max-width: 901px) and (orientation:portrait) {
+    display: none;
+    //background-color: fuchsia;
+  }
+  ////////// MOBILE - LANDSCAPE - TOO - SMALL /////////////////
+  @media (max-height: 500px) and (orientation:landscape) {
+    display: block;
+   // background-color: yellowgreen;
+  }
+}
+.iframe-full{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999999999;
+}

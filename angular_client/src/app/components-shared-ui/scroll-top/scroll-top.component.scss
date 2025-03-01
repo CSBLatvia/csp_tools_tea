@@ -1,0 +1,36 @@
+@import "../../../css/app-main-vars";
+@import "../../../css/app-colors";
+
+.scroll-top{
+  @media (max-width: $app-max-width-content) {
+    display: block;
+    @include cursorTouch();
+  }
+  @media (min-width: $app-max-width-content+1) {
+    display: none;
+    @include cursorNone();
+  }
+}
+.scroll-top-btn{
+  opacity: 1;
+  color: #ffffff;
+  background-color: $app-col-button-dark;
+  width: 48px;
+  height: 48px;
+  position: fixed;
+  margin: 12px;
+  left: 0;
+  bottom: 0;
+  border-radius: $app-border-radius-default;
+  z-index: 1020;
+  @include defaultDropShadow();
+}
+
+.show{
+  opacity: 1;
+  @include cursorTouch();
+}
+.hide{
+  opacity: 0;
+  @include cursorNone();
+}

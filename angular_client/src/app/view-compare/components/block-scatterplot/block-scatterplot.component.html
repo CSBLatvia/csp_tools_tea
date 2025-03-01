@@ -1,0 +1,43 @@
+<ng-container #view>
+  <div *ngIf="mobile==true" [ngClass]="open==true?'expandable-block-open':'expandable-block-close'">
+    <div class="expandable-block-title-mob" (click)="onOpenClose()">
+      <h3 class="h3-title">{{titleVO?.name}}</h3>
+      <clr-icon shape="angle" [dir]="open==true?'up':'down'" size="24" class="ico-expandable"></clr-icon>
+    </div>
+    <div [ngClass]="open==true?'expandable-block-content-mob':'expandable-block-content-mob-hidden'">
+      <app-choose-m2-m2 (onAxisChange)="onAxisChange($event)" [mobile]="mobile"></app-choose-m2-m2>
+      <div class="component-container" [id]="'cont-'+id">
+        <div class="component">
+          <app-comp-scatter-plot
+            [model]="model"
+            [route]="routeOther"
+            [URL]="component_link"
+            [axisType]="axisType"
+            [visible] = "open"
+          ></app-comp-scatter-plot>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="expandable-block-desktop" *ngIf="mobile==false">
+    <div class="expandable-block-title">
+      <h3 class="h3-title">{{titleVO?.name}}</h3>
+    </div>
+
+    <div class="expandable-block-content-desktop">
+      <app-choose-m2-m2 (onAxisChange)="onAxisChange($event)" [mobile]="mobile"></app-choose-m2-m2>
+      <div class="component-container-aspect-1-1" [id]="'cont-'+id">
+        <div class="component">
+          <app-comp-scatter-plot
+            [model]="model"
+            [route]="route"
+            [URL]="component_link"
+            [axisType]="axisType"
+            [visible] = "true"
+          ></app-comp-scatter-plot>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+

@@ -1,0 +1,217 @@
+ @import "./app-colors";
+ @import "app-main-vars";
+
+
+
+ .expandable-block{
+   background-color: $app-col-panel-background;
+   @include defaultGrayBorder();
+   //border-color: $app-col-panel-border;
+   //border-color: fuchsia;
+ }
+ .expandable-block-desktop{
+   background-color: $app-col-panel-background;
+   @include defaultGrayBorder();
+   //border-color: $app-col-panel-border;
+   //border-color: fuchsia;
+   margin-bottom: 1.2rem;
+ }
+
+ .expandable-block-open{
+   @extend .expandable-block;
+   padding-bottom: 1rem;
+   .expandable-block-title-mob{
+     .h3-title{
+       white-space: break-spaces;
+       overflow: hidden;
+       text-overflow: ellipsis;
+       width: calc(100% - 1.6rem);
+       height: 24px;
+       vertical-align: middle;
+     }
+   }
+ }
+ .expandable-block-close{
+   @extend .expandable-block;
+   padding-bottom: 0;
+ }
+
+ .expandable-block-title{
+   display: inline-block;
+   width: 100%;
+   padding:0.5rem;
+   background-color: $app-col-panel-background;
+   @include defaultGrayBorder();
+   border-color: $app-col-panel-border;
+ }
+ .expandable-block-title-mob{
+    @extend .expandable-block-title;
+    @include cursorTouch();
+   .h3-title{
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     width: calc(100% - 1.6rem);
+     height: 24px;
+     vertical-align: middle;
+   }
+   padding: 0.65rem;
+ }
+
+ .expandable-block-content{
+   @include defaultGrayBorder();
+ }
+ .expandable-block-content-desktop{
+   border: none;
+ }
+ .expandable-block-content-mob{
+   @extend .expandable-block-content;
+   border: none;
+ }
+ .expandable-block-content-mob-hidden{
+   visibility: hidden;
+   touch-action: none;
+   pointer-events: none;
+   width: 0;height: 0;
+   position: absolute;
+ }
+ .ico-expandable{
+   display: inline-block;
+   float: right;
+ }
+ .h2-title{
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+ .h3-title{
+   margin: 0;
+   padding: 0;
+   display: inline-block;
+ }
+ .h4-title{
+   margin: 0;
+   padding: 0;
+   display: inline-block;
+ }
+ .h5-title{
+   margin: 0;
+   padding: 0;
+   display: inline-block;
+ }
+ .h6-title{
+   margin: 0;
+   padding: 0;
+   display: inline-block;
+ }
+
+ .theme-blue{
+   background-color: $app-col-primary;
+   h3{
+     color: #ffffff !important;
+   }
+
+ }
+ .content-text{
+   padding: 0.5rem;
+ }
+
+
+ //////////////////////////
+ // link
+ //////////////////////////
+ .link{
+   text-transform: uppercase;
+   padding: 0.25rem !important;
+   margin: 0.5rem !important;
+   display: inline-block;
+   pointer-events: auto;
+   position: relative;
+ }
+
+
+ //////////////////////////
+ // iframe containers
+ //////////////////////////
+
+ .component-container{
+   background-color: $app-col-panel-background;
+   width: 100%;
+   height:auto;
+   margin: .5rem;width: calc(100% - 1rem);
+ }
+ .component{
+   width: 100%;
+   height:100%;
+   position:relative;
+ }
+
+ .component-container-aspect-2-1{
+   background-color: $app-col-panel-background;
+   width: 100%;
+   aspect-ratio: 16 / 8;
+   margin: .5rem;width: calc(100% - 1rem);
+ }
+ .component-container-aspect-1-1{
+   background-color: $app-col-panel-background;
+   width: 100%;
+   aspect-ratio: 1;
+   margin: .5rem;width: calc(100% - 1rem);
+ }
+ .component-container-aspect-1-2{
+   background-color: $app-col-panel-background;
+   width: 100%;
+   aspect-ratio: 8 / 16;
+   margin: .5rem;width: calc(100% - 1rem);
+ }
+ .component-container-aspect-4-1{
+   background-color: $app-col-panel-background;
+   width: 100%;
+   aspect-ratio: 16 / 4;
+   margin: .5rem;width: calc(100% - 1rem);
+ }
+
+
+ iframe{
+   border: none;
+   width: 100%;
+   height: 100%;
+   background-color: $app-col-panel-background;
+ }
+
+ .btn-territory{
+   margin: 0.5rem;
+ }
+ .btn-territory-label{
+   padding-right: 0.25rem;
+ }
+ .btn-map{
+   margin: 0.5rem;
+ }
+ .btn-map-label{
+   padding-right: 0.25rem;
+ }
+
+
+
+ a{
+   .ico-link{
+     fill: $app-col-orange;
+   }
+ }
+
+ a:hover{
+   .ico-link{
+     fill: $app-col-orange;
+   }
+ }
+ a:active{
+   .ico-link{
+     fill: $app-col-orange;
+   }
+ }
+ a:visited{
+   .ico-link{
+     fill: $app-col-orange;
+   }
+ }

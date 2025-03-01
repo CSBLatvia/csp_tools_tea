@@ -1,0 +1,15 @@
+<div class="comp" #comp id="comp-{{domID}}">
+  <div id="map-area" #mapArea [ngClass]="'csb-map-container'">
+    <app-mapbox #mapbox
+      [model]="model"
+      [route]="route"
+      [visible] = "visible"
+      [fullscreen]="fullscreen"
+      (onFullscreenChange)="onFullscreenChange($event)"
+    ></app-mapbox>
+  </div>
+</div>
+<share-button *ngIf="service.error==null && service.empty==null" [URL]="URL"></share-button>
+
+
+

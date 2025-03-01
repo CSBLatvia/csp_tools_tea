@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" charset="utf-8">
+  <title>example_map_viz</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    window.addEventListener("message", (event) => {
+
+      const func = event.data.func;
+      const id = event.data.id;
+      const fullscreen = event.data.fullscreen;
+      let ww = -1;
+      let hh = -1;
+
+      console.log('***************');
+      console.log('PARENT-WIN - MESSAGE');
+      console.log('***************');
+      console.log('func: '+func);
+      console.log('id: '+id);
+      console.log('***************');
+
+      let elem = document.getElementById(id);
+      console.dir(elem);
+      console.log('***************');
+
+
+      switch (func){
+        case 'iframe-fullscreen':
+
+          if(fullscreen==true){
+            elem.classList.add('iframe-full');
+          }else{
+            elem.classList.remove('iframe-full');
+          }
+          break;
+
+        case 'resize':
+          ww = event.data.width;
+          hh = event.data.height;
+          break;
+      }
+
+
+
+    }  );
+  </script>
+</head>
+<body>
+
+<iframe
+  class="iframe"
+  id="318a7b9e-4672-476f-8444-a49abae73466"
+  src="https://tools.csb.gov.lv/tea_3/external/lv/ext-map-viz/2022/workplace/number-of-workplaces/territories-4/all/industry/none?dom=318a7b9e-4672-476f-8444-a49abae73466"
+></iframe>
+</body>
+</html>

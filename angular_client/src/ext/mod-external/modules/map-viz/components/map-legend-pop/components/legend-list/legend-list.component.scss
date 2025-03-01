@@ -1,0 +1,30 @@
+@import "../../../../../../../../css/app-modifiers";
+
+.list-item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 0.25rem;
+  //@include debugBorder();
+}
+.item-color{
+  width: 16px;
+  height: 16px;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin: 0;padding: 0;
+  background-color: #ffffff;
+}
+.item-txt{
+  padding: 0 !important;
+  margin: 0 !important;
+  display: inline;
+  width: 100%;
+  float: left;
+  vertical-align: top;
+  padding-left: 0.125rem !important;
+}
+.title-block{
+  padding: 0; margin: 0;
+  padding-bottom: 0.5rem;
+}

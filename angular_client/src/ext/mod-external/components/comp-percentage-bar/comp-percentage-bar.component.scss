@@ -1,0 +1,44 @@
+@import "../../../../css/ext-components";
+
+.comp{
+  width: 100%;
+  height: auto;
+  background-color: #ffffff !important;
+  background-image: none !important;
+  min-height: 40px;
+}
+.bar{
+  width: 100%;
+  height: 40px;
+  display: flex;
+}
+.bar-on{
+    @include gradientTopBottom($app-col-primary, $app-col-primary-dark-1);
+    height: 40px;
+}
+.bar-off{
+    background-color: $app-col-gray-2;
+    height: 40px;
+}
+
+.label-on{
+  color: #ffffff;
+  height: 40px;
+  line-height: 40px;
+  font-size: 1rem;
+  margin: 0 !important;
+  padding: 0;
+  padding-left: 0.25rem;
+  border-style: none;
+  float: left;
+}
+.label-off{
+  height: 40px;
+  line-height: 40px;
+  font-size: 1rem;
+  margin: 0 !important;
+  padding: 0;
+  padding-left: 0.25rem;
+  border-style: none;
+  float: left;
+}

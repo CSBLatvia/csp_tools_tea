@@ -1,0 +1,113 @@
+@import "app-main-vars";
+@import "./app-colors";
+
+.mod--btn-link{
+  font-weight: 700;
+}
+.mod--btn-link:hover{
+  font-weight: 700;
+  color: $app-col-primary-dark-2;
+  text-decoration: underline;
+}
+.mod--button{
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: normal;
+  @include defaultDropShadow();
+}
+.mod--button:hover{
+  background-color: $app-col-primary-dark-2;
+}
+
+
+/////////////////////////
+// empty info
+/////////////////////////
+.mod--empty-info{
+  // alert;
+  // alert-warning;
+  margin: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 0.25rem;
+}
+.mod--empty-info>span{
+  padding: 0.125rem;
+  margin: 0;
+  display: inline;
+  white-space: nowrap;
+}
+
+////////////////////////
+//  cards
+////////////////////////
+.mod--card{
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+}
+.mod--card-no-shadow{
+  box-shadow: none;
+}
+////////////////////////
+// clr-row
+////////////////////////
+.mod--row{
+  // clr-row
+  padding: 0;
+  margin: 0;
+}
+//////////////////////
+// clr-col
+//////////////////////
+.mod--col{
+  // clr-col-4;     //3
+  // clr-col-sm-3;  //4
+  // clr-col-md-2;  //6
+  // clr-col-lg;    //8
+  padding: 0;
+  margin: 0;
+}
+/////////////////////
+// no gap
+/////////////////////
+.mod--no-gap{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.mod--no-gap-top{
+  margin: 0;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+.mod--card-header{
+  background-color: $app-col-panel-background;
+  border-radius: $app-border-radius-default;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  ///
+  width: 100%;
+  display: inline-block;
+  text-align: left;
+  //white-space: nowrap;
+  //overflow: hidden;
+  //text-overflow: ellipsis;
+  vertical-align: middle;
+}
+.mod--h3{
+  padding-top: 1rem;
+}
+.mod--h3-tb{
+  padding-top: 1rem;
+  padding-bottom: 0.25rem;
+}
+.mod--h4-tb{
+  padding-top: 1rem;
+  padding-bottom: 0.25rem;
+}

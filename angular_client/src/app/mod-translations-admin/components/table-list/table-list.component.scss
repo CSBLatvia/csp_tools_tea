@@ -1,0 +1,67 @@
+@import "../../../../css/app-colors";
+
+$col-bg: #2a2a2a;
+$col-dark-bg: #1a1a1a;
+
+.list-area{
+  width: auto;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  pointer-events: auto;
+  touch-action: auto;
+
+  position: absolute;
+  z-index: 99999;
+}
+.list-title{
+  display: inline-flex;
+}
+.list-item{
+  background-color: $col-dark-bg;
+  line-height: 80px;
+  margin: 0;
+  padding: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: $app-col-primary;
+  pointer-events: all;
+  user-select: none;
+}
+.list-item-active{
+  @extend .list-item;
+  background-color: #000000;
+  color: $app-col-primary;
+}
+.list-ico{
+  width: 80px;
+  height: 80px;
+  background-color: $app-col-primary;
+  fill: #ffffff;
+}
+.ico{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: #ffffff;
+}
+.list-item:hover{
+  background-color: #000000;
+  color: $app-col-primary;
+}
+.list-item:hover:active{
+  background-color: #000000;
+  color: $app-col-primary;
+}
+.list-item:active{
+  background-color: #000000;
+  color: $app-col-primary;
+}
+
+.list-menu{
+  background-color: $col-dark-bg;
+  width: auto;
+}

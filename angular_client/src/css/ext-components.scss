@@ -1,0 +1,23 @@
+@import "app-colors";
+@import "app-main-vars";
+@import "ext-main";
+
+.comp{
+  width: 100%;
+  height: auto;
+  background-color: #ffffff !important;
+  background-image: none !important;
+  min-height: 40px;
+}
+.debug{
+  @include debugLabel();
+  color: #4b4b4b;
+}
+.title{
+  padding: 0.25rem !important;
+  margin: 0 !important;
+}
+.text{
+  padding: 0.25rem !important;
+  margin: 0 !important;
+}

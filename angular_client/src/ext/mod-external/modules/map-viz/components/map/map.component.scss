@@ -1,0 +1,60 @@
+@import "../../../../../../css/app-main-vars";
+@import "../../../../../../css/app-modifiers";
+@import "../../../../../../css/app-classes";
+@import "../../../../../../css/app-colors";
+
+.csb-map-container-with-menu{
+  margin: 0; padding: 0;
+
+  width: calc(100% - #{$app-map-menu-width} );
+  /*height: calc(100% - #{$app-top-menu-height} - #{$app-footer-height});*/
+  height: calc(var(--AH));
+  top: $app-top-menu-height;
+  left: $app-map-menu-width;
+  background-color: $app-col-map-bg;
+  position: absolute;
+}
+.csb-map-container{
+  margin: 0; padding: 0;
+  width: 100%;
+  /*height: calc(100% - #{$app-top-menu-height} - #{$app-footer-height});*/
+  height: calc(var(--AH));
+  top: $app-top-menu-height;
+  left: 0;
+  background-color: $app-col-map-bg;
+  position: absolute;
+}
+.csb-map-container-screenshot{
+  margin: 0; padding: 0;
+
+  width: 100% !important;
+  height: 100% !important;
+  top: 0 !important;
+  left: 0 !important;
+  background-color: $app-col-map-bg !important;
+  position: absolute !important;
+  z-index: 9999999 !important;
+}
+.csb-map-container-hidden{
+  margin: 0; padding: 0;
+  width: 100%;
+  /*height: calc(100% - #{$app-top-menu-height} - #{$app-footer-height});*/
+  height: calc(var(--AH));
+  top: $app-top-menu-height;
+  left: 0;
+  position: absolute;
+  visibility: hidden;
+  pointer-events: none;
+  touch-action: none;
+}
+.csb-map-container-full{
+  margin: 0; padding: 0;
+
+  width: 100% !important;
+  height: 100% !important;
+  top: 0;
+  left: 0;
+  background-color: $app-col-map-bg;
+  position: absolute;
+  z-index: 30000;
+}

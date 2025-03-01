@@ -1,0 +1,184 @@
+@import "../../../../css/ext-components";
+@import "../../../../css/app-highcharts";
+@import "../../../../css/app-colors";
+
+.comp{
+  width: 100%;
+  height: auto;
+  background-color: #ffffff !important;
+  background-image: none !important;
+  min-height: 40px;
+}
+.chart{
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+
+.csb-nav{
+  height: auto;
+}
+.csb-nav>*{
+  @include cursorTouch();
+}
+
+.csb-nav-item{
+  display: inline-block !important;
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--clr-nav-link-color, #8c8c8c) !important;
+  font-size: 0.7rem;
+  font-weight: var(--clr-nav-link-font-weight, 400);
+  letter-spacing: normal;
+  line-height: 1.8rem;
+  display: inline-block;
+  padding: 0 0.15rem;
+  box-shadow: none;
+}
+
+
+.csb-nav-item-active{
+  @extend .csb-nav-item;
+  color: var(--clr-nav-link-active-color, black) !important;
+  box-shadow: 0 -0.15rem 0 var(--clr-nav-active-box-shadow-color, #0072a3) inset !important;
+  transition: box-shadow 0.2s ease-in !important;
+}
+
+
+.content-area{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  padding: 0;
+  // @include defaultGrayBorder();
+}
+
+
+
+////////////////////////////////////////////////
+:root,
+.highcharts-light {
+  /* Colors for data series and points according to csb colors */
+  --highcharts-color-0: #3376C4;
+  --highcharts-color-1: #6eb504;
+  --highcharts-color-2: #0A859B;
+  --highcharts-color-3: #16BBDC;
+  --highcharts-color-4: #F9DA4F;
+  --highcharts-color-5: #F0825F;
+  --highcharts-color-6: #53C0B5;
+
+  //not redefined - old highcharts values
+  --highcharts-color-7: #fa4b42;
+  --highcharts-color-8: #feb56a;
+  --highcharts-color-9: #91e8e1;
+}
+$txt-color: #000000;
+$txt-bg-color: #ffffff;
+
+
+
+.highcharts-root text {
+  font-family: 'Roboto Condensed', Arial, Helvetica !important;
+  stroke-width: 0;
+  //////////////////////////////
+  fill: $txt-color;
+  background-color: $txt-bg-color;
+  //////////////////////////////
+  font-weight: 400 !important;
+}
+.highcharts-root  * {
+  font-family: 'Roboto Condensed', Arial, Helvetica !important;
+
+}
+
+.highcharts-strong {
+  font-weight: bold !important;
+}
+
+.highcharts-emphasized {
+  font-style: italic !important;
+}
+
+.highcharts-background {
+  fill: $app-vis-bg;
+}
+
+
+.highcharts-plot-border, .highcharts-plot-background {
+  fill: none;
+}
+
+
+.highcharts-label-box {
+  fill: none;
+}
+
+.highcharts-button-box {
+  fill: inherit;
+}
+
+/* Titles */
+.highcharts-title {
+  fill: #333333;
+  font-size: 1.5em;
+  font-weight: 400 !important;
+}
+
+.highcharts-subtitle {
+  fill: #666666;
+}
+
+/* Axes */
+.highcharts-axis-line {
+  fill: none;
+  stroke: #ccd6eb;
+}
+
+.highcharts-yaxis .highcharts-axis-line {
+  stroke-width: 0;
+}
+
+.highcharts-axis-title {
+  fill: $txt-color;
+  background-color: $txt-bg-color;
+}
+
+.highcharts-axis-labels {
+  fill: $txt-color;
+  background-color: $txt-bg-color;
+
+  cursor: default;
+  font-size: 0.9em;
+}
+
+.highcharts-grid-line {
+  fill: none;
+  stroke: #e6e6e6;
+}
+
+.highcharts-xaxis-grid .highcharts-grid-line {
+  stroke-width: 0;
+}
+
+.highcharts-tick {
+  stroke: #ccd6eb;
+}
+
+.highcharts-yaxis .highcharts-tick {
+  stroke-width: 0;
+}
+
+.highcharts-minor-grid-line {
+  stroke: #f2f2f2;
+}
+
+.highcharts-crosshair-thin {
+  stroke-width: 1px;
+  stroke: #cccccc;
+}
+
+.highcharts-crosshair-category {
+  stroke: #ccd6eb;
+  stroke-opacity: 0.25;
+}

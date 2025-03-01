@@ -1,0 +1,78 @@
+<div [ngClass]="index%2==0?'item':'item-2'" id="item-{{index}}">
+  <div class="clr-row">
+    <div class="clr-col">
+      <h4 class="id-h4-dark">{{vo.p_id}}</h4>
+    </div>
+  </div>
+  <div class="clr-row">
+    <div class="clr-col">
+      <span>home_work</span>
+    </div>
+    <div class="clr-col">
+      <span>indicator_type</span>
+    </div>
+    <div class="clr-col">
+      <span>selected_territ</span>
+    </div>
+    <div class="clr-col">
+      <span>indicator_selected</span>
+    </div>
+    <div class="clr-col">
+      <span>breakdown_selected</span>
+    </div>
+    <div class="clr-col">
+      <span>request_type</span>
+    </div>
+    <div class="clr-col">
+      <span>text_display_lv</span>
+    </div>
+    <div class="clr-col">
+      <span>text_display_en</span>
+    </div>
+    <div class="clr-col">
+      <span>sql_string_from_join</span>
+    </div>
+    <div class="clr-col">
+      <span>sql_string_where</span>
+    </div>
+  </div>
+  <div class="clr-row">
+    <div class="clr-col">
+      <span  [ngClass]="vo.home_work==''?'edit-field-empty':'edit-field'" [contentEditable]="false" spellcheck="false">{{vo.home_work}}</span>
+    </div>
+    <div class="clr-col">
+      <span  [ngClass]="vo.indicator_type==''?'edit-field-empty':'edit-field'"[contentEditable]="false" spellcheck="false">{{vo.indicator_type }}</span>
+    </div>
+    <div class="clr-col">
+      <span  [ngClass]="vo.selected_territ==''?'edit-field-empty':'edit-field'"[contentEditable]="false" spellcheck="false">{{vo.selected_territ }}</span>
+    </div>
+    <div class="clr-col">
+      <span  [ngClass]="vo.indicator_selected==''?'edit-field-empty':'edit-field'"[contentEditable]="false" spellcheck="false">{{vo.indicator_selected }}</span>
+    </div>
+    <div class="clr-col">
+      <span  [ngClass]="vo.breakdown_selected==''?'edit-field-empty':'edit-field'"[contentEditable]="false" spellcheck="false">{{vo.breakdown_selected }}</span>
+    </div>
+    <div class="clr-col">
+      <span  [ngClass]="vo.request_type==''?'edit-field-empty':'edit-field'"[contentEditable]="false" spellcheck="false">{{vo.request_type }}</span>
+    </div>
+    <div class="clr-col">
+      <span  [ngClass]="vo.text_display_lv==''?'edit-field-empty':'edit-field'"[contentEditable]="false" spellcheck="false">{{vo.text_display_lv }}</span>
+    </div>
+    <div class="clr-col">
+      <span  [ngClass]="vo.text_display_en==''?'edit-field-empty':'edit-field'"[contentEditable]="false" spellcheck="false">{{vo.text_display_en }}</span>
+    </div>
+    <div class="clr-col">
+      <span  [ngClass]="vo.sql_string_from_join==''?'edit-field-empty':'edit-field'"[contentEditable]="false" spellcheck="false">{{vo.sql_string_from_join }}</span>
+    </div>
+    <div class="clr-col">
+      <span  [ngClass]="vo.sql_string_where==''?'edit-field-empty':'edit-field'"[contentEditable]="false" spellcheck="false">{{vo.sql_string_where }}</span>
+    </div>
+
+
+  </div>
+  <div class="clr-row">
+    <div class="clr-col">
+          <button class="btn btn-primary btn-sticky-left" (click)="onModifyClick(vo)">{{editVO?.name}}</button>
+    </div>
+  </div>
+</div>

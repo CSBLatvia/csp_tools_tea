@@ -1,0 +1,17 @@
+<div class="comp" #comp>
+  <h4 class="title">{{service?.title?.name}}</h4>
+  <div class="clr-row">
+    <div class="clr-col">
+      <span class="label-p7 title-left" [ngClass]="direction==-1?'txt-off':'txt-on'">{{service?.titleHome?.name }}</span>
+    </div>
+    <div class="clr-col">
+      <span class="label-p7 title-right" [ngClass]="direction==-1?'txt-on':'txt-off'">{{service?.titleWork?.name }}</span>
+    </div>
+  </div>
+  <div class="chart" id="{{chart_id}}"></div>
+  <share-button  [URL]="URL"></share-button>
+  <service-error *ngIf="error!==null" [data]="error"></service-error>
+  <service-empty *ngIf="empty!==null" [data]="empty"></service-empty>
+</div>
+
+

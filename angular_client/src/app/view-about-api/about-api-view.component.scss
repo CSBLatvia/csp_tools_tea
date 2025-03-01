@@ -1,0 +1,49 @@
+@import "../../css/app-main-vars";
+@import "../../css/app-modifiers";
+@import "../../css/app-classes";
+@import "../../css/app-colors";
+
+/*.csb-content-max{
+  padding-bottom: 6rem;
+}
+.csb-content-mob{
+  padding-bottom: 6rem;
+}*/
+.csb-about-title{
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: $app-col-primary;
+  margin: 0;
+  margin-top: 0rem;
+  padding: 0.5rem;
+  /////////////////////
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.csb-about-text{
+  margin: 0;
+  margin-top: 0rem;
+  padding: 0.5rem;
+  padding-top: 0;
+  p{
+    margin: 0;
+    padding-top: 0.5rem;
+  }
+  h2{
+    margin: 0;
+    padding-top: 1rem;
+    color: $app-col-primary;
+  }
+  h3{
+    margin: 0;
+    padding-top: 0.5rem;
+    color: $app-col-primary;
+  }
+  .csb-about-mod-table{
+    margin-top: 0.5rem;
+    border-collapse: collapse;
+  }
+
+}
+

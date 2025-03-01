@@ -1,0 +1,100 @@
+
+<div class="top-left-area">
+  <button class="btn btn-primary btn-create" (click)="onCreate()" *ngIf="user=='admin'">CREATE NEW</button>
+  <app-table-filter [service]="service" [filter]="service.filter"></app-table-filter>
+</div>
+<div class="table-area">
+  <ng-container *ngFor="let item of items;index as i" >
+    <app-item-list [vo]="item" [index]="i" [user]="user" (onModify)="onModify($event)" (onDelete)="onDelete($event)"></app-item-list>
+  </ng-container>
+  <app-item-create *ngIf="actionCreate==true" [vo]="createVO" (onCancel)="onCreateCancel($event)" (onSubmit)="onCreateSubmit($event)"></app-item-create>
+  <app-item-modify *ngIf="actionModify==true" [vo]="modifyVO" [posY]="posY" (onCancel)="onModifyCancel($event)" (onSubmit)="onModifySubmit($event)"></app-item-modify>
+</div>
+<div class="pop-container">
+
+  <clr-modal [(clrModalOpen)]="modifySuccessPop" [clrModalSize]="'sm'" [clrModalStaticBackdrop]="true" [clrModalClosable]="false">
+    <p class="modal-title app-title">Success!</p>
+    <div class="modal-body">
+      <div class="csb-modal-container">
+        <p>Success - item has been modified!</p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary btn-success btn-block" (click)="closePops()">{{okVO?.name}}</button>
+    </div>
+  </clr-modal>
+  <clr-modal [(clrModalOpen)]="modifyErrorPop" [clrModalSize]="'sm'" [clrModalStaticBackdrop]="true" [clrModalClosable]="false">
+    <p class="modal-title app-title">Error!</p>
+    <div class="modal-body">
+      <div class="csb-modal-container">
+        <p>Error - item hasn't been modified!</p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary btn-warning btn-block" (click)="closePops()">{{okVO?.name}}</button>
+    </div>
+  </clr-modal>
+
+  <clr-modal [(clrModalOpen)]="createSuccessPop" [clrModalSize]="'sm'" [clrModalStaticBackdrop]="true" [clrModalClosable]="false">
+    <p class="modal-title app-title">Success!</p>
+    <div class="modal-body">
+      <div class="csb-modal-container">
+        <p>Success - item has been created!</p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary btn-success btn-block" (click)="closePops()">{{okVO?.name}}</button>
+    </div>
+  </clr-modal>
+
+  <clr-modal [(clrModalOpen)]="createErrorPop" [clrModalSize]="'sm'" [clrModalStaticBackdrop]="true" [clrModalClosable]="false">
+    <p class="modal-title app-title">Error!</p>
+    <div class="modal-body">
+      <div class="csb-modal-container">
+        <p>Error - item hasn't been created!</p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary btn-warning btn-block" (click)="closePops()">{{okVO?.name}}</button>
+    </div>
+  </clr-modal>
+
+
+  <clr-modal [(clrModalOpen)]="deleteCheckPop" [clrModalSize]="'sm'" [clrModalStaticBackdrop]="true" [clrModalClosable]="false">
+    <p class="modal-title app-title">Delete item?</p>
+    <div class="modal-body">
+      <div class="csb-modal-container">
+        <p>Do you realy want to delete this item?</p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary" (click)="onDeleteCancel()">{{cancelVO?.name}}</button>
+      <button type="button" class="btn btn-primary" (click)="onDeleteSubmit()">{{submitVO?.name}}</button>
+    </div>
+  </clr-modal>
+
+  <clr-modal [(clrModalOpen)]="deleteSuccessPop" [clrModalSize]="'sm'" [clrModalStaticBackdrop]="true" [clrModalClosable]="false">
+    <p class="modal-title app-title">Success!</p>
+    <div class="modal-body">
+      <div class="csb-modal-container">
+        <p>Success - item has been deleted!</p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary btn-success btn-block" (click)="closePops()">{{okVO?.name}}</button>
+    </div>
+  </clr-modal>
+
+  <clr-modal [(clrModalOpen)]="deleteErrorPop" [clrModalSize]="'sm'" [clrModalStaticBackdrop]="true" [clrModalClosable]="false">
+    <p class="modal-title app-title">Error!</p>
+    <div class="modal-body">
+      <div class="csb-modal-container">
+        <p>Error - item hasn't been deleted!</p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary btn-warning btn-block" (click)="closePops()">{{okVO?.name}}</button>
+    </div>
+  </clr-modal>
+
+</div>

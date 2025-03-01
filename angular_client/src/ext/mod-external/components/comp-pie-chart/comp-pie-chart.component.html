@@ -1,0 +1,24 @@
+<div class="comp" #comp>
+  <ng-container *ngIf="service.content!==null">
+    <div class="cont">
+      <div class="item-pie">
+        <div class="pie">
+          <div class="pie-chart no-round"
+               [ngStyle]="{'--p': 100,'--c':color_OFF}"
+          ></div>
+          <div class="pie-chart no-round animate"
+               [ngStyle]="{'--p': service.content.percentage,'--c':route.direction=='out'?color_OUT:color_IN}"
+          >
+            {{service.content.percentage}}%
+          </div>
+        </div>
+      </div>
+      <span class="item-text" [innerHTML]="service.content.text"></span>
+    </div>
+  </ng-container>
+  <share-button  [URL]="URL"></share-button>
+  <service-error *ngIf="service.error!==null" [data]="service.error"></service-error>
+  <service-empty *ngIf="service.empty!==null" [data]="service.empty"></service-empty>
+</div>
+
+
