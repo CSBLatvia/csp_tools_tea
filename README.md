@@ -27,13 +27,13 @@ This project is a web-based tool for data visualization and analysis, developed 
   - Sitemap generation
 - **Details**: See [serverside_php/README.md](serverside_php/README.md) for more information
 
-### serverside
-- **Description**: PostgreSQL & MS SQL Server scripts
+### serverside_postgresql
+- **Description**: PostgreSQL scripts
 - **Features**:
   - Database schema definitions
-  - Data aggregation queries
-  - Data transformation scripts
-  - Geospatial data processing
+  - Data import
+  - User interface texts
+  - JSON retrieval functions
 
 ## Server Directories
 
@@ -51,10 +51,11 @@ The project is structured as a full-stack application:
 
 1. **Frontend**: Angular 16.2 application with multiple modules for different features
 2. **Backend**: PHP services that connect to PostgreSQL database
-3. **Database**: SQL scripts for both PostgreSQL and MS SQL Server
+3. **Database**: PostgreSQL scripts
 
 ## Deployment
 
 See the respective README files in each component directory for detailed deployment instructions:
 - [Angular Client Deployment](angular_client/README.md)
 - [PHP Services Deployment](serverside_php/README.md)
+- [PostgreSQL Deployment](serverside_postgresql/README.md)
