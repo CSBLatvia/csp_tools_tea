@@ -661,7 +661,7 @@ _sql_final := CONCAT (
   
   (
     SELECT ''clusters'' r_name
-      ,to_json(getjenksbreaks_classes(array_agg(choro), 5, ', $9, ')) r_t
+      ,getbreaks_classes(array_agg(choro), 5, ''none'', ''fisher'', ', $9, ')->''upper'' r_t
     FROM sql_divider
     WHERE choro > 0
       AND code != ''total''
