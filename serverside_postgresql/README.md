@@ -1,5 +1,7 @@
 # Scripts to create PostgreSQL schema with tables and views and add data
 
+Add functions [get_pretty_number](https://github.com/CSBLatvia/postgresql-common?tab=readme-ov-file#get_pretty_number) and [getbreaks_classes](https://github.com/CSBLatvia/postgresql-common?tab=readme-ov-file#getbreaks_classes) from [postgresql-common](https://github.com/CSBLatvia/postgresql-common) repository.
+
 1. [role.sql](serverside_postgresql/role.sql) – to create users and roles (replace `password` with user password).
 2. [tea.sql](serverside_postgresql/tea.sql) – to create the tea schema.
 3. [create_tables.sql](serverside_postgresql/create_tables.sql) – to create tables.
