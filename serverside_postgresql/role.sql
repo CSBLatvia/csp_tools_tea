@@ -47,3 +47,9 @@ GRANT USAGE
   ON SCHEMA web
   TO tea_dev
     ,vdvv_web;
+
+--Piešķir lasīšanas tiesības pretty_numbers tabulai.
+GRANT SELECT
+  ON TABLE pretty_numbers
+  TO vdvv_web
+    ,editor_texts;
