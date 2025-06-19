@@ -320,7 +320,7 @@ CASE
 
     CASE
       WHEN _m1 = 'h'
-        THEN _sql_divider :=- CONCAT (
+        THEN _sql_divider := CONCAT (
           _sql_divider
           ,'dv.brdwn = ''total''
   AND dv.brdwn_code=''total''
